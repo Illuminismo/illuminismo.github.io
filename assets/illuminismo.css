@@ -1,0 +1,30 @@
+/* ILLUMINISMO — shared tokens and components. Standard: STYLE.md (2026-11-14). */
+:root{--bg:#11110f;--panel:#1a1a16;--line:#37362c;--gold:#d5b978;--text:#f1eee4;--muted:#aaa79a;--paper:#e8dfc9;--ink:#272720;
+--serif:Georgia,"Noto Serif Georgian",serif;--sans:Arial,"Noto Sans Georgian",sans-serif;color-scheme:dark;font-size:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.8}
+a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+h1,h2{font-family:var(--serif);font-weight:400}h1{font-size:clamp(2.1rem,4.1vw,4.4rem);line-height:1.4;letter-spacing:-.035em}h2{font-size:1.9rem;line-height:1.5}
+/* header */
+.header{max-width:1480px;margin:auto;padding:27px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:25px}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-size:1.25rem;letter-spacing:.15em;line-height:1.4}
+.brand-mark{border:1px solid var(--gold);width:34px;height:44px;display:grid;place-items:center;color:var(--gold);font-size:1.65rem}
+.brand small{display:block;font-family:var(--sans);letter-spacing:.12em;color:var(--muted);font-size:.75rem;margin-top:5px}
+.nav{border:0;border-bottom:1px solid transparent;background:transparent;padding:8px 0;color:var(--muted);font-size:.9rem}.nav.active{color:var(--gold);border-color:var(--gold)}
+main{max-width:1480px;margin:auto;padding:0 5%}
+/* text */
+.eyebrow{text-transform:uppercase;color:var(--gold);font-size:.8rem;letter-spacing:.08em;margin-bottom:18px}
+.lede{font-size:1.05rem;color:#c7c4b6;max-width:660px;line-height:1.95}
+.gold{background:var(--gold);color:#161610;border:1px solid var(--gold);padding:13px 20px;font-weight:600;font-size:.9rem;min-height:48px}
+.quiet,.source-link{color:var(--gold);border-bottom:1px solid var(--line);font-size:.85rem}.source-cite{cursor:default}
+/* editorial */
+.editorial-body{max-width:760px;margin:12px 0 64px}.editorial-body p{font-family:var(--serif);font-size:1.12rem;line-height:1.95}
+.editorial-body p:first-child::first-letter{float:left;font-size:3.7rem;line-height:1;padding:8px 12px 0 0;color:var(--gold)}
+.signature{color:var(--gold);font-style:italic;margin-top:30px}
+/* timeline */
+.timeline-entry{display:grid;grid-template-columns:205px 1fr;gap:20px;border-top:1px solid var(--line);padding:30px 0}.timeline-date{color:var(--muted)}
+/* author — always last */
+.author-card{display:grid;grid-template-columns:180px 1fr;gap:44px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:52px 0;margin:64px 0}
+.author-card img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
+.author-role{color:var(--muted);font-size:.9rem;letter-spacing:.04em}
+@media(max-width:720px){.timeline-entry{grid-template-columns:1fr}.author-card{grid-template-columns:1fr;justify-items:start;gap:26px}.author-card img{width:140px;height:140px}}
