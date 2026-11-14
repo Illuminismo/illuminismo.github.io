@@ -39,7 +39,7 @@
 <script type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","name":"ILLUMINISMO","alternateName":"Illuminismo — Myth · Memory · Future","url":"<data:blog.homepageUrl.jsonEscaped/>","inLanguage":["ka","en"],"author":{"@type":"Person","name":"Nika Khutsurauli","url":"https://illuminismo.github.io/portfolio/"},"potentialAction":{"@type":"SearchAction","target":"<data:blog.homepageUrl.jsonEscaped/>search?q={q}","query-input":"required name=q"}}</script>
 </b:if>
 <b:skin><![CDATA[
-/* ILLUMINISMO — tokens (STYLE.md §1–3) */
+/* ILLUMINISMO  tokens (STYLE.md 13) */
 :root{--bg:#11110f;--panel:#1a1a16;--line:#37362c;--gold:#d5b978;--text:#f1eee4;--muted:#aaa79a;--paper:#e8dfc9;--ink:#272720;
 --serif:Georgia,"Noto Serif Georgian",serif;--sans:Arial,"Noto Sans Georgian",sans-serif;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -108,14 +108,14 @@ h2{font-size:1.9rem;line-height:1.45}h3{font-size:1.35rem}
 .post-body img{border:1px solid var(--line)}
 .post-body figure{margin:1.8em 0}.post-body figcaption{font-family:var(--sans);color:var(--muted);font-size:.82rem}
 .post-body table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:.92rem}.post-body th,.post-body td{border-bottom:1px solid var(--line);padding:8px;text-align:left}
-/* evidence (F-EVIDENCE · research machine) */
+/* evidence (F-EVIDENCE  research machine) */
 .fact,.interp{font-family:var(--sans);font-size:.95rem;padding:14px 18px;margin:1.4em 0;border:1px solid var(--line);background:var(--panel)}
-.fact::before{content:"წყარო · Source";display:block;color:var(--gold);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-.interp{border-style:dashed}.interp::before{content:"ინტერპრეტაცია · Interpretation";display:block;color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.fact::before{content:"\10EC \10E7 \10D0 \10E0 \10DD  \00B7  Source";display:block;color:var(--gold);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.interp{border-style:dashed}.interp::before{content:"\10D8 \10DC \10E2 \10D4 \10E0 \10DE \10E0 \10D4 \10E2 \10D0 \10EA \10D8 \10D0  \00B7  Interpretation";display:block;color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
 .ev{display:inline-block;font-family:var(--sans);font-size:.7rem;border:1px solid var(--gold);color:var(--gold);padding:0 6px;margin-left:4px;vertical-align:middle}
 .sources{font-family:var(--sans);font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);margin-top:2.5em;padding-top:1em}
 .sources li{margin-bottom:6px}
-/* bilingual (F-I18N): <div class="lang-ka">…</div><div class="lang-en">…</div> */
+/* bilingual (F-I18N): <div class="lang-ka"></div><div class="lang-en"></div> */
 html[data-lang=ka] .lang-en,html[data-lang=en] .lang-ka{display:none}
 /* labels, nav */
 .labels{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0}.labels a{border:1px solid var(--line);padding:4px 10px;font-size:.8rem;color:var(--muted)}.labels a:hover{color:var(--gold);border-color:var(--gold)}
@@ -139,7 +139,7 @@ html[data-lang=ka] .lang-en,html[data-lang=en] .lang-ka{display:none}
 @media(max-width:720px){.search-form input{width:110px}.author-card{grid-template-columns:1fr}.post-nav{grid-template-columns:1fr}.post-nav .next{text-align:left}.hero{padding:44px 0 34px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
-/* ===== v1.1 — richer home ===== */
+/* ===== v1.1  richer home ===== */
 body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),transparent 60%),var(--bg)}
 .orn{display:flex;align-items:center;gap:14px;color:var(--gold);font-size:.8rem;letter-spacing:.3em;margin:0 0 18px}.orn::before,.orn::after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex:1;max-width:120px}.orn::after{background:linear-gradient(90deg,var(--gold),transparent)}
 .hero-x{position:relative;margin:0 -5.6%;min-height:640px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:80px 5.6% 70px;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -162,7 +162,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
 .pt{border:1px solid var(--line);padding:16px 14px;background:linear-gradient(180deg,var(--panel),transparent);min-height:120px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}
 .pt:hover{border-color:var(--gold);transform:translateY(-3px)}
 .pt .num{font-family:var(--serif);color:var(--gold);font-size:1.3rem}.pt .nm{font-family:var(--serif);font-size:1.1rem;line-height:1.3}
-.st{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.st.live{color:var(--gold)}.st.live::before{content:"● "}
+.st{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.st.live{color:var(--gold)}.st.live::before{content:"\25CF  "}
 /* rich work cards */
 .works{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .work{position:relative;overflow:hidden;min-height:330px;justify-content:flex-end}
