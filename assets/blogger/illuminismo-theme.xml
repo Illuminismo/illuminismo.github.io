@@ -234,7 +234,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
 <main id='main'>
 <b:if cond='data:view.isHomepage'>
   <b:section class='wrap' id='home-top' name='Home — hero and works' showaddelement='yes'>
-    <b:widget id='HTML1' locked='false' title='Hero' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML11' locked='false' title='Hero' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="hero-x">
 <div class="bg" style="background-image:url(https://illuminismo.github.io/amirani/images/01.webp)"></div>
@@ -277,7 +277,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
     </b:widget>
-    <b:widget id='HTML2' locked='false' title='Works' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML12' locked='false' title='Works' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="block" id="works">
 <div class="orn">✦</div>
