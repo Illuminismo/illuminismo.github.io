@@ -138,6 +138,51 @@ html[data-lang=ka] .lang-en,html[data-lang=en] .lang-ka{display:none}
 .page .post-body > p:first-of-type::first-letter{float:none;font-size:inherit;padding:0;color:inherit}
 @media(max-width:720px){.search-form input{width:110px}.author-card{grid-template-columns:1fr}.post-nav{grid-template-columns:1fr}.post-nav .next{text-align:left}.hero{padding:44px 0 34px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== v1.1 — richer home ===== */
+body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),transparent 60%),var(--bg)}
+.orn{display:flex;align-items:center;gap:14px;color:var(--gold);font-size:.8rem;letter-spacing:.3em;margin:0 0 18px}.orn::before,.orn::after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex:1;max-width:120px}.orn::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.hero-x{position:relative;margin:0 -5.6%;min-height:640px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:80px 5.6% 70px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-x .bg{position:absolute;inset:0;background-size:cover;background-position:center 35%;animation:kb 40s ease-in-out infinite alternate;opacity:.55}
+.hero-x::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 8%,rgba(17,17,15,.75) 48%,rgba(17,17,15,.35)),linear-gradient(0deg,var(--bg),transparent 35%)}
+.hero-x > *:not(.bg){position:relative;z-index:2}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1%,1%)}}
+.hero-x h1{font-size:clamp(2.4rem,5vw,4.8rem);margin:.1em 0 .4em}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin:28px 0 0;color:var(--muted);font-size:.85rem}.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:1.9rem;color:var(--text)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.ghost{display:inline-block;border:1px solid var(--line);color:var(--text);padding:13px 20px;font-size:.9rem;min-height:48px}.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.fan{position:relative;height:460px;perspective:1200px}
+.fan a{position:absolute;left:50%;top:50%;width:190px;margin:-170px 0 0 -95px;transform-origin:50% 120%;transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .3s;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6))}
+.fan img{display:block;width:100%;border-radius:8px}
+.fan a:nth-child(1){transform:rotate(-24deg) translateX(-150px)}.fan a:nth-child(2){transform:rotate(-12deg) translateX(-75px)}.fan a:nth-child(3){transform:rotate(0) translateY(-14px);z-index:3}.fan a:nth-child(4){transform:rotate(12deg) translateX(75px)}.fan a:nth-child(5){transform:rotate(24deg) translateX(150px)}
+.fan a:hover{z-index:5;filter:drop-shadow(0 24px 40px rgba(213,185,120,.35))}
+.fan a:nth-child(1):hover{transform:rotate(-24deg) translateX(-150px) translateY(-30px)}.fan a:nth-child(2):hover{transform:rotate(-12deg) translateX(-75px) translateY(-30px)}.fan a:nth-child(3):hover{transform:translateY(-44px) scale(1.04)}.fan a:nth-child(4):hover{transform:rotate(12deg) translateX(75px) translateY(-30px)}.fan a:nth-child(5):hover{transform:rotate(24deg) translateX(150px) translateY(-30px)}
+/* pantheon map */
+.pantheons{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.pt{border:1px solid var(--line);padding:16px 14px;background:linear-gradient(180deg,var(--panel),transparent);min-height:120px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}
+.pt:hover{border-color:var(--gold);transform:translateY(-3px)}
+.pt .num{font-family:var(--serif);color:var(--gold);font-size:1.3rem}.pt .nm{font-family:var(--serif);font-size:1.1rem;line-height:1.3}
+.st{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.st.live{color:var(--gold)}.st.live::before{content:"● "}
+/* rich work cards */
+.works{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.work{position:relative;overflow:hidden;min-height:330px;justify-content:flex-end}
+.work img{position:absolute;inset:0;height:100%;aspect-ratio:auto;transition:transform 1.2s ease;opacity:.85}
+.work::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(17,17,15,.96) 18%,rgba(17,17,15,.2) 70%)}
+.work:hover img{transform:scale(1.06)}
+.work-body{position:relative;z-index:2}.work-body .go{color:var(--gold);font-size:.85rem;margin-top:10px;display:inline-block}
+.work.wide{grid-column:span 2}
+/* quote band */
+.quote-band{padding:80px 0;text-align:center;border-bottom:1px solid var(--line)}
+.quote-band blockquote{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.5;max-width:900px;margin:0 auto 16px}
+.quote-band cite{color:var(--muted);font-style:normal;font-size:.85rem;letter-spacing:.08em}
+/* split band (music / author) */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line);margin:0 -5.6%}
+.split .img{min-height:420px;background-size:cover;background-position:center}
+.split .txt{padding:60px 5.6%;display:flex;flex-direction:column;justify-content:center;background:var(--panel)}
+.author-band{display:grid;grid-template-columns:200px 1fr;gap:44px;align-items:center;padding:64px 0;border-bottom:1px solid var(--line)}
+.author-band img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
+@media(max-width:900px){.hero-x{grid-template-columns:1fr;min-height:0}.fan{height:380px;transform:scale(.8)}.split{grid-template-columns:1fr}.work.wide{grid-column:auto}.author-band{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.hero-x .bg{animation:none}}
 ]]></b:skin>
 </head>
 <body>
@@ -191,13 +236,43 @@ html[data-lang=ka] .lang-en,html[data-lang=en] .lang-ka{display:none}
   <b:section class='wrap' id='home-top' name='Home — hero and works' showaddelement='yes'>
     <b:widget id='HTML1' locked='false' title='Hero' type='HTML' version='2' visible='true'>
       <b:widget-settings>
-        <b:widget-setting name='content'><![CDATA[<section class="hero">
+        <b:widget-setting name='content'><![CDATA[<section class="hero-x">
+<div class="bg" style="background-image:url(https://illuminismo.github.io/amirani/images/01.webp)"></div>
+<div>
 <p class="eyebrow">ILLUMINISMO / ATLAS OF MYTH</p>
 <h1 class="lang-ka">მითი, მეხსიერება, მომავალი.</h1>
 <h1 class="lang-en">Myth, memory, future.</h1>
-<p class="lede lang-ka">ძველი პანთეონები, ეპოსები და მუსიკა — კვლევით, წყაროებით და ახალი ფორმით. ყოველი ნამუშევარი ცალკე სამყაროა; ეს გვერდი მათი რუკაა.</p>
-<p class="lede lang-en">Ancient pantheons, epics and music — researched, sourced and given a new form. Each work is its own world; this page is the map.</p>
-<p><a class="gold" href="#works">ნამუშევრები · Works</a></p>
+<p class="lede lang-ka">ძველი პანთეონები ახალი ფორმით: ტაროს დასტები, ილუსტრირებული ეპოსები, მუსიკა და კვლევითი სტატიები — წყაროებით.</p>
+<p class="lede lang-en">Ancient pantheons in a new form: tarot decks, illustrated epics, music and research articles — with sources.</p>
+<div class="btns"><a class="gold" href="#works"><span class="lang-ka">ნამუშევრები</span><span class="lang-en">Explore the works</span></a><a class="ghost" href="#pantheons"><span class="lang-ka">პანთეონების რუკა</span><span class="lang-en">Pantheon map</span></a></div>
+<div class="stats"><div><b>3</b><span class="lang-ka">ტაროს დასტა</span><span class="lang-en">tarot decks</span></div><div><b>234</b><span class="lang-ka">კარტი</span><span class="lang-en">cards</span></div><div><b>1</b><span class="lang-ka">ეპოსი</span><span class="lang-en">epic</span></div><div><b>13</b><span class="lang-ka">პანთეონი გზაში</span><span class="lang-en">pantheons ahead</span></div></div>
+</div>
+<div class="fan" aria-label="Cards">
+<a href="https://illuminismo.github.io/greek-tarot/"><img src="https://illuminismo.github.io/greek-tarot/cards/01.webp" alt="The Magician — Greek Tarot"/></a>
+<a href="https://illuminismo.github.io/indian-tarot/"><img src="https://illuminismo.github.io/indian-tarot/cards/10.webp" alt="Wheel of Fortune — Indian Tarot"/></a>
+<a href="https://illuminismo.github.io/greek-tarot/"><img src="https://illuminismo.github.io/greek-tarot/cards/00.webp" alt="The Fool — Greek Tarot"/></a>
+<a href="https://illuminismo.github.io/norse-tarot/"><img src="https://illuminismo.github.io/norse-tarot/cards/19.webp" alt="The Sun — Norse Tarot"/></a>
+<a href="https://illuminismo.github.io/greek-tarot/"><img src="https://illuminismo.github.io/greek-tarot/cards/21.webp" alt="The World — Greek Tarot"/></a>
+</div>
+</section>
+<section class="block" id="pantheons">
+<div class="orn">✦</div>
+<div class="section-head"><h2><span class="lang-ka">პანთეონების რუკა</span><span class="lang-en">The pantheon map</span></h2><span class="muted">3 / 13</span></div>
+<div class="pantheons">
+<a class="pt" href="https://illuminismo.github.io/greek-tarot/"><span class="num">I</span><span class="nm"><span class="lang-ka">ბერძნული</span><span class="lang-en">Greek</span></span><span class="st live">Live</span></a>
+<a class="pt" href="https://illuminismo.github.io/indian-tarot/"><span class="num">II</span><span class="nm"><span class="lang-ka">ინდური</span><span class="lang-en">Indian</span></span><span class="st live">Live</span></a>
+<a class="pt" href="https://illuminismo.github.io/norse-tarot/"><span class="num">III</span><span class="nm"><span class="lang-ka">სკანდინავიური</span><span class="lang-en">Norse</span></span><span class="st live">Live</span></a>
+<a class="pt" href="https://illuminismo.github.io/amirani/"><span class="num">IV</span><span class="nm"><span class="lang-ka">ქართული</span><span class="lang-en">Georgian</span></span><span class="st live">Epic live</span></a>
+<div class="pt"><span class="num">V</span><span class="nm"><span class="lang-ka">სპარსული</span><span class="lang-en">Persian</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">VI</span><span class="nm"><span class="lang-ka">მესოპოტამიური</span><span class="lang-en">Mesopotamian</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">VII</span><span class="nm"><span class="lang-ka">ეგვიპტური</span><span class="lang-en">Egyptian</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">VIII</span><span class="nm"><span class="lang-ka">ფინური</span><span class="lang-en">Finnish</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">IX</span><span class="nm"><span class="lang-ka">ჩინური</span><span class="lang-en">Chinese</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">X</span><span class="nm"><span class="lang-ka">კელტური</span><span class="lang-en">Celtic</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">XI</span><span class="nm"><span class="lang-ka">აცტეკური</span><span class="lang-en">Aztec</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">XII</span><span class="nm"><span class="lang-ka">მაია</span><span class="lang-en">Maya</span></span><span class="st">Soon</span></div>
+<div class="pt"><span class="num">XIII</span><span class="nm"><span class="lang-ka">ინკა</span><span class="lang-en">Inca</span></span><span class="st">Soon</span></div>
+</div>
 </section>]]></b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
@@ -205,16 +280,23 @@ html[data-lang=ka] .lang-en,html[data-lang=en] .lang-ka{display:none}
     <b:widget id='HTML2' locked='false' title='Works' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="block" id="works">
+<div class="orn">✦</div>
 <div class="section-head"><h2><span class="lang-ka">ნამუშევრები</span><span class="lang-en">Works</span></h2><a class="quiet" href="https://illuminismo.github.io/portfolio/">Portfolio →</a></div>
 <div class="filters" role="group" aria-label="Filter works">
 <button data-filter="all" aria-pressed="true">All</button><button data-filter="tarot" aria-pressed="false">Tarot</button><button data-filter="epic" aria-pressed="false">Epics</button>
 </div>
 <div class="works">
-<a class="work" data-kind="tarot" href="https://illuminismo.github.io/greek-tarot/"><img loading="lazy" src="https://illuminismo.github.io/greek-tarot/og.jpg" alt="Greek Tarot — ILLUMINISMO"/><div class="work-body"><span class="tag">Tarot · 78</span><h3>Greek Tarot</h3><p class="lang-ka">ბერძნული პანთეონი 78 კარტში, მითის კვლევით.</p><p class="lang-en">The Greek pantheon in 78 cards, with the myths researched.</p></div></a>
-<a class="work" data-kind="tarot" href="https://illuminismo.github.io/indian-tarot/"><img loading="lazy" src="https://illuminismo.github.io/indian-tarot/og.jpg" alt="Indian Tarot — ILLUMINISMO"/><div class="work-body"><span class="tag">Tarot · 78</span><h3>Indian Tarot</h3><p class="lang-ka">ინდური ღმერთები და ეპოსები ერთ დასტაში.</p><p class="lang-en">Indian gods and epics in one deck.</p></div></a>
-<a class="work" data-kind="tarot" href="https://illuminismo.github.io/norse-tarot/"><img loading="lazy" src="https://illuminismo.github.io/norse-tarot/og.jpg" alt="Norse Tarot — ILLUMINISMO"/><div class="work-body"><span class="tag">Tarot · 78</span><h3>Norse Tarot</h3><p class="lang-ka">სკანდინავიური მითები: ედები, საგები, რუნები.</p><p class="lang-en">Norse myth: the Eddas, sagas and runes.</p></div></a>
-<a class="work" data-kind="epic" href="https://illuminismo.github.io/amirani/"><img loading="lazy" src="https://illuminismo.github.io/amirani/og.jpg" alt="Amirani — ILLUMINISMO"/><div class="work-body"><span class="tag">Illustrated epic</span><h3>Amirani</h3><p class="lang-ka">ქართული ეპოსი სცენებით, ფილმებით და არჩევანით.</p><p class="lang-en">The Georgian epic in scenes, films and choices.</p></div></a>
+<a class="work wide" data-kind="epic" href="https://illuminismo.github.io/amirani/"><img loading="lazy" src="https://illuminismo.github.io/amirani/images/12.webp" alt="Amirani — ILLUMINISMO"/><div class="work-body"><span class="tag">Illustrated epic · KA / EN</span><h3>Amirani</h3><p class="lang-ka">ქართული ეპოსი 24 სცენით, სამი ფილმით და შენი არჩევანით.</p><p class="lang-en">The Georgian epic in 24 scenes, three films and your choices.</p><span class="go">→</span></div></a>
+<a class="work" data-kind="tarot" href="https://illuminismo.github.io/greek-tarot/"><img loading="lazy" src="https://illuminismo.github.io/greek-tarot/cards/13.webp" alt="Greek Tarot — ILLUMINISMO"/><div class="work-body"><span class="tag">Tarot · 78</span><h3>Greek Tarot</h3><p class="lang-ka">ბერძნული პანთეონი 78 კარტში, მითის კვლევით.</p><p class="lang-en">The Greek pantheon in 78 cards, with the myths researched.</p><span class="go">→</span></div></a>
+<a class="work" data-kind="tarot" href="https://illuminismo.github.io/indian-tarot/"><img loading="lazy" src="https://illuminismo.github.io/indian-tarot/cards/00.webp" alt="Indian Tarot — ILLUMINISMO"/><div class="work-body"><span class="tag">Tarot · 78</span><h3>Indian Tarot</h3><p class="lang-ka">ინდური ღმერთები და ეპოსები ერთ დასტაში.</p><p class="lang-en">Indian gods and epics in one deck.</p><span class="go">→</span></div></a>
+<a class="work" data-kind="tarot" href="https://illuminismo.github.io/norse-tarot/"><img loading="lazy" src="https://illuminismo.github.io/norse-tarot/cards/00.webp" alt="Norse Tarot — ILLUMINISMO"/><div class="work-body"><span class="tag">Tarot · 78</span><h3>Norse Tarot</h3><p class="lang-ka">სკანდინავიური მითები: ედები, საგები, რუნები.</p><p class="lang-en">Norse myth: the Eddas, sagas and runes.</p><span class="go">→</span></div></a>
 </div>
+</section>
+<section class="quote-band">
+<div class="orn">✦</div>
+<blockquote class="lang-ka">„ისტორია არის ინფორმაცია, რომელიც ტრანსფორმაციებს გადაურჩა.“</blockquote>
+<blockquote class="lang-en">“History is information that survived its transformations.”</blockquote>
+<cite>— HISTORIA · ILLUMINISMO</cite>
 </section>]]></b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
@@ -317,6 +399,34 @@ html[data-lang=ka] .lang-en,html[data-lang=en] .lang-ka{display:none}
     </b:includable>
   </b:widget>
 </b:section>
+<b:if cond='data:view.isHomepage'>
+  <b:section class='wrap' id='home-bottom' name='Home — music and author' showaddelement='yes'>
+    <b:widget id='HTML3' locked='false' title='Music' type='HTML' version='2' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<section class="split">
+<div class="img" style="background-image:url(https://illuminismo.github.io/amirani/images/24.webp)"></div>
+<div class="txt"><p class="eyebrow">ILLUMINISMO / SOUND</p><h2><span class="lang-ka">მუსიკა და ფილმები</span><span class="lang-en">Music and films</span></h2>
+<p class="lede lang-ka">ყოველ ეპოსს თავისი ხმა აქვს. ალბომები, ფილმები და სცენების მუსიკა — YouTube-ზე.</p>
+<p class="lede lang-en">Every epic has its own sound. Albums, films and scene music — on YouTube.</p>
+<p><a class="gold" href="https://www.youtube.com/@illuminismo7" rel="noopener">YouTube →</a></p></div>
+</section>]]></b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'><data:content/></b:includable>
+    </b:widget>
+    <b:widget id='HTML4' locked='false' title='Author' type='HTML' version='2' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<section class="author-band">
+<img src="https://illuminismo.github.io/greek-tarot/author.webp" alt="Nika Khutsurauli" loading="lazy"/>
+<div><p class="eyebrow">Author</p><h2>Nika Khutsurauli</h2>
+<p class="lede lang-ka">ILLUMINISMO-ს ავტორი. ვაგროვებ და ვიკვლევ პანთეონებს, ეპოსებსა და სიმბოლოებს და ახალ ფორმას ვაძლევ — ტაროდ, ფილმად, მუსიკად.</p>
+<p class="lede lang-en">Author of ILLUMINISMO. I collect and research pantheons, epics and symbols, and give them a new form — as tarot, film and music.</p>
+<p><a class="quiet" href="https://illuminismo.github.io/portfolio/">Portfolio</a> · <a class="quiet" href="/p/about.html">About</a></p></div>
+</section>]]></b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'><data:content/></b:includable>
+    </b:widget>
+  </b:section>
+</b:if>
 </main>
 
 <footer class='site-footer'>
