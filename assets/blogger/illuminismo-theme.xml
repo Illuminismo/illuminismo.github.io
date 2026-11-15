@@ -195,7 +195,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
       <span>ILLUMINISMO<small>MYTH · MEMORY · FUTURE</small></span>
     </a>
     <b:section class='menu' id='menu' maxwidgets='1' name='Menu' showaddelement='yes'>
-      <b:widget id='LinkList1' locked='false' title='Menu' type='LinkList' version='2' visible='true'>
+      <b:widget id='LinkList901' locked='false' title='Menu' type='LinkList' version='2' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='link-0'>/search/label/Atlas</b:widget-setting>
           <b:widget-setting name='text-0'>Atlas</b:widget-setting>
@@ -234,7 +234,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
 <main id='main'>
 <b:if cond='data:view.isHomepage'>
   <b:section class='wrap' id='home-top' name='Home — hero and works' showaddelement='yes'>
-    <b:widget id='HTML11' locked='false' title='Hero' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML901' locked='false' title='Hero' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="hero-x">
 <div class="bg" style="background-image:url(https://illuminismo.github.io/amirani/images/01.webp)"></div>
@@ -277,7 +277,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
     </b:widget>
-    <b:widget id='HTML12' locked='false' title='Works' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML902' locked='false' title='Works' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="block" id="works">
 <div class="orn">✦</div>
@@ -401,7 +401,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
 </b:section>
 <b:if cond='data:view.isHomepage'>
   <b:section class='wrap' id='home-bottom' name='Home — music and author' showaddelement='yes'>
-    <b:widget id='HTML3' locked='false' title='Music' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML903' locked='false' title='Music' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="split">
 <div class="img" style="background-image:url(https://illuminismo.github.io/amirani/images/24.webp)"></div>
@@ -413,7 +413,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%,rgba(213,185,120,.07),t
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
     </b:widget>
-    <b:widget id='HTML4' locked='false' title='Author' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML904' locked='false' title='Author' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="author-band">
 <img src="https://illuminismo.github.io/greek-tarot/author.webp" alt="Nika Khutsurauli" loading="lazy"/>
