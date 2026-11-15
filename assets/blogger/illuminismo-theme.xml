@@ -12,7 +12,6 @@
 <b:else/>
   <title><data:view.title.escaped/> · <data:blog.title.escaped/></title>
 </b:if>
-<b:include data='blog' name='all-head-content'/>
 <b:if cond='data:view.isSearch or data:view.isArchive'>
   <meta content='noindex,follow' name='robots'/>
 </b:if>
@@ -39,6 +38,7 @@
 <link href='/feeds/posts/default' rel='alternate' title='ILLUMINISMO — RSS' type='application/atom+xml'/>
 <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4814204427776887'></script>
 <meta content='summary_large_image' name='twitter:card'/>
+<b:include data='blog' name='all-head-content'/>
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
 <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600&amp;family=Noto+Serif+Georgian:wght@400;600&amp;display=swap' rel='stylesheet'/>
