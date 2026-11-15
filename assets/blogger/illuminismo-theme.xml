@@ -190,6 +190,19 @@ html,body{overflow-x:hidden}
 .post-body img{height:auto!important}.post-body .separator a{margin:0!important}
 .post-body iframe{width:100%!important;aspect-ratio:16/9;height:auto!important}
 .post-body table{display:block;overflow-x:auto}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pillar{border:1px solid var(--line);padding:22px 18px;background:linear-gradient(180deg,var(--panel),transparent);transition:border-color .2s,transform .2s}
+.pillar:hover{border-color:var(--gold);transform:translateY(-3px)}
+.pillar .num{font-family:var(--serif);color:var(--gold);font-size:1.4rem}.pillar h3{margin:8px 0 6px;font-size:1.15rem;line-height:1.35}.pillar p{margin:0;color:var(--muted);font-size:.88rem}
+@media(max-width:1000px){.pillars{grid-template-columns:repeat(2,1fr)}}
+/* contact form */
+.contact-wrap{max-width:760px;margin:0 auto 60px}.contact-wrap label{display:block;margin:0 0 16px;color:var(--muted);font-size:.85rem}
+.contact-wrap input[type=text],.contact-wrap input[type=email],.contact-wrap textarea{display:block;width:100%;margin-top:6px;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:12px;font:inherit}
+.contact-wrap input:focus,.contact-wrap textarea:focus{border-color:var(--gold);outline:none}
+.contact-form-success-message{color:var(--gold)}.contact-form-error-message{color:#e08a7a}
+.menu ul{gap:18px}
 ]]></b:skin>
 </head>
 <body>
@@ -201,30 +214,7 @@ html,body{overflow-x:hidden}
       <span class='brand-mark'>I</span>
       <span>ILLUMINISMO<small>MYTH · MEMORY · FUTURE</small></span>
     </a>
-    <b:section class='menu' id='menu' maxwidgets='1' name='Menu' showaddelement='yes'>
-      <b:widget id='LinkList901' locked='false' title='Menu' type='LinkList' version='2' visible='true'>
-        <b:widget-settings>
-          <b:widget-setting name='link-0'>/search/label/Atlas</b:widget-setting>
-          <b:widget-setting name='text-0'>Atlas</b:widget-setting>
-          <b:widget-setting name='link-1'>/search/label/Tarot</b:widget-setting>
-          <b:widget-setting name='text-1'>Tarot</b:widget-setting>
-          <b:widget-setting name='link-2'>/search/label/Epics</b:widget-setting>
-          <b:widget-setting name='text-2'>Epics</b:widget-setting>
-          <b:widget-setting name='link-3'>/search/label/Music</b:widget-setting>
-          <b:widget-setting name='text-3'>Music</b:widget-setting>
-          <b:widget-setting name='link-4'>/p/about.html</b:widget-setting>
-          <b:widget-setting name='text-4'>About</b:widget-setting>
-          <b:widget-setting name='sorting'>NONE</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-          <nav aria-label='Main'><ul>
-            <b:loop values='data:links' var='link'>
-              <li><a expr:href='data:link.target'><data:link.name/></a></li>
-            </b:loop>
-          </ul></nav>
-        </b:includable>
-      </b:widget>
-    </b:section>
+    <nav aria-label='Main' class='menu'><ul><li><a href='/search/label/Myth%20%26%20Pantheon'><span class='lang-ka'>მითი</span><span class='lang-en'>Myth</span></a></li><li><a href='/search/label/Civilizations%20%26%20Memory'><span class='lang-ka'>ცივილიზაციები</span><span class='lang-en'>Civilizations</span></a></li><li><a href='/search/label/Symbol%20%26%20Consciousness'><span class='lang-ka'>სიმბოლო</span><span class='lang-en'>Symbol</span></a></li><li><a href='/search/label/Future%20%26%20Society'><span class='lang-ka'>მომავალი</span><span class='lang-en'>Future</span></a></li><li><a href='/search/label/Original%20Works'><span class='lang-ka'>ნამუშევრები</span><span class='lang-en'>Works</span></a></li><li><a href='/p/about.html'><span class='lang-ka'>ჩვენ შესახებ</span><span class='lang-en'>About</span></a></li></ul></nav>
     <div class='tools'>
       <form class='search-form' expr:action='data:blog.searchUrl' method='get' role='search'>
         <input aria-label='Search' name='q' placeholder='ძებნა · Search' type='search'/>
@@ -281,6 +271,12 @@ html,body{overflow-x:hidden}
 <div class="pt"><span class="num">XIII</span><span class="nm"><span class="lang-ka">ინკა</span><span class="lang-en">Inca</span></span><span class="st">Soon</span></div>
 </div>
 </section>]]></b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'><data:content/></b:includable>
+    </b:widget>
+    <b:widget id='HTML905' locked='false' title='Pillars' type='HTML' version='2' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<section class="block" id="pillars"><div class="orn">✦</div><div class="section-head"><h2><span class="lang-ka">ხუთი მიმართულება</span><span class="lang-en">Five directions</span></h2><a class="quiet" href="/p/about.html"><span class="lang-ka">რა არის ILLUMINISMO →</span><span class="lang-en">What is ILLUMINISMO →</span></a></div><div class="pillars"><a class="pillar" href="/search/label/Myth%20%26%20Pantheon"><span class="num">I</span><h3><span class="lang-ka">მითი და პანთეონი</span><span class="lang-en">Myth &amp; Pantheon</span></h3><p class="lang-ka">ღმერთები, გმირები და მათი ამბები.</p><p class="lang-en">Gods, heroes and their stories.</p></a><a class="pillar" href="/search/label/Civilizations%20%26%20Memory"><span class="num">II</span><h3><span class="lang-ka">ცივილიზაციები და მეხსიერება</span><span class="lang-en">Civilizations &amp; Memory</span></h3><p class="lang-ka">ქალაქები, დაცემები და რაც დარჩა.</p><p class="lang-en">Cities, falls and what remained.</p></a><a class="pillar" href="/search/label/Symbol%20%26%20Consciousness"><span class="num">III</span><h3><span class="lang-ka">სიმბოლო და ცნობიერება</span><span class="lang-en">Symbol &amp; Consciousness</span></h3><p class="lang-ka">რელიგია, რიტუალი, არქეტიპი.</p><p class="lang-en">Religion, ritual, archetype.</p></a><a class="pillar" href="/search/label/Future%20%26%20Society"><span class="num">IV</span><h3><span class="lang-ka">მომავალი და საზოგადოება</span><span class="lang-en">Future &amp; Society</span></h3><p class="lang-ka">ძველი ცოდნა დღეს.</p><p class="lang-en">Old knowledge, today.</p></a><a class="pillar" href="/search/label/Original%20Works"><span class="num">V</span><h3><span class="lang-ka">ორიგინალური ნამუშევრები</span><span class="lang-en">Original Works</span></h3><p class="lang-ka">ტარო, ეპოსები, ფილმები, მუსიკა.</p><p class="lang-en">Tarot, epics, films, music.</p></a></div></section>]]></b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
     </b:widget>
@@ -434,6 +430,25 @@ html,body{overflow-x:hidden}
     </b:widget>
   </b:section>
 </b:if>
+
+<b:section class='wrap' id='contact-form' name='Contact form' showaddelement='no'>
+  <b:widget id='ContactForm1' locked='false' title='Contact' type='ContactForm' version='2' visible='true'>
+    <b:includable id='main'>
+      <b:if cond='data:view.isPage'>
+      <div class='contact-wrap' id='contact-box' style='display:none'>
+        <form name='contact-form'>
+          <label><span class='lang-ka'>სახელი</span><span class='lang-en'>Name</span><input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' type='text'/></label>
+          <label><span class='lang-ka'>ელფოსტა *</span><span class='lang-en'>Email *</span><input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' type='email'/></label>
+          <label><span class='lang-ka'>წერილი *</span><span class='lang-en'>Message *</span><textarea class='contact-form-email-message' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' rows='6'></textarea></label>
+          <input class='contact-form-button contact-form-button-submit gold' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' type='button' value='Send · გაგზავნა'/>
+          <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'></p>
+          <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'></p>
+        </form>
+      </div>
+      </b:if>
+    </b:includable>
+  </b:widget>
+</b:section>
 </main>
 
 <footer class='site-footer'>
@@ -455,6 +470,7 @@ html,body{overflow-x:hidden}
   function set(l){root.setAttribute('data-lang',l);document.querySelectorAll('[data-set-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set-lang')===l)});try{localStorage.setItem(key,l)}catch(e){}}
   set(lang);
   document.querySelectorAll('[data-set-lang]').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-set-lang'))})});
+  var cb=document.getElementById('contact-box');if(cb&&/\/p\/contact\.html/.test(location.pathname))cb.style.display='block';
   // active menu item
   document.querySelectorAll('.menu a').forEach(function(a){if(location.href.indexOf(a.getAttribute('href'))>-1)a.classList.add('active')});
   // works filter (F-CATALOG)
