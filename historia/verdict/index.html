@@ -1,0 +1,599 @@
+<!doctype html><html lang="ka"><head>
+<link rel="canonical" href="https://illuminismo.github.io/historia/verdict/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Illuminismo">
+<meta property="og:title" content="HISTORIA · The Verdict">
+<meta property="og:description" content="104 მტკიცება. ოთხი ეტაპის აუდიტი. ხუთი ღია კითხვა, რომელიც ყველაფერს ცვლიდა. აქ ისინი დაიხურა, ან ზუსტად ითქვა, რა დახურავს მათ. ბოლოს კი ატლანტიდის განაჩენი.">
+<meta property="og:url" content="https://illuminismo.github.io/historia/verdict/">
+<meta name="twitter:card" content="summary_large_image"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
+<title>HISTORIA · The Verdict</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Noto+Serif+Georgian:wght@400;600;800&family=Noto+Sans+Georgian:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --basalt:#0D1114; --basalt-2:#141A1E; --basalt-3:#1C2429; --line:#2A343A;
+  --lime:#DCE0D8; --lime-dim:#9CA6A1; --lapis:#6F8CEB; --lapis-deep:#2B3F86; --gold:#C9A45C;
+  --ok:#7FC39C; --open:#E0B266; --rej:#E58E86;
+  --disp:"Cinzel","Noto Serif Georgian",Georgia,serif;
+  --serif:"Noto Serif Georgian",Georgia,serif;
+  --sans:"Noto Sans Georgian",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--basalt);color:var(--lime);font:16px/1.7 var(--sans);margin:0;padding-inline:16px}
+a{color:var(--lapis)}
+.w{max-width:1120px;margin:0 auto}
+.eyebrow{font:500 11px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--lime-dim)}
+h1,h2,h3{text-wrap:balance;margin:0}
+h2{font:700 clamp(28px,4.4vw,46px)/1.12 var(--disp);letter-spacing:.03em}
+h3{font:600 22px/1.3 var(--serif)}
+p{margin:0}
+.lead{font:400 clamp(17px,1.6vw,20px)/1.7 var(--serif);color:var(--lime);max-width:62ch}
+.muted{color:var(--lime-dim)}
+section{padding-block:clamp(64px,9vw,120px);border-top:1px solid var(--line)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--lapis);outline-offset:3px}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;border-top:0;padding-block:40px 64px;margin-inline:-16px;padding-inline:16px;overflow:hidden}
+#core{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,20,.2) 0%,rgba(13,17,20,.05) 40%,rgba(13,17,20,.92) 100%);pointer-events:none}
+.hero .w{position:relative;z-index:2;width:100%;display:grid;gap:22px}
+.hero h1{font:800 clamp(44px,9vw,112px)/.95 var(--disp);letter-spacing:.04em}
+.hero h1 small{display:block;font:600 clamp(18px,2.4vw,28px)/1.3 var(--serif);letter-spacing:0;color:var(--gold);margin-top:14px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font:600 14px var(--sans);padding:13px 22px;border-radius:2px;border:1px solid var(--lapis);background:var(--lapis);color:#0B0F18;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--lime);border-color:var(--line)}
+.hint{position:absolute;right:16px;top:20px;z-index:2;font:11px var(--mono);color:var(--lime-dim)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:var(--basalt);padding:26px 22px;display:grid;gap:4px}
+.stat b{font:700 44px/1 var(--disp);font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--lime-dim)}
+
+/* split */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,5vw,64px);align-items:center}
+.stack{display:grid;gap:18px}
+
+/* evidence scale 3D */
+.scale3d{display:grid;gap:6px;perspective:900px}
+.slab{transform:rotateX(18deg) rotateZ(-2deg);transform-origin:center;padding:12px 16px;border-radius:2px;display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;box-shadow:0 10px 24px rgba(0,0,0,.35);transition:transform .3s}
+.slab:hover{transform:rotateX(0) rotateZ(0) translateZ(20px)}
+.slab b{font:700 18px var(--mono)}
+.flags{display:flex;flex-wrap:wrap;gap:8px}
+.flag{font:500 12px var(--mono);border:1px solid var(--line);padding:5px 10px;border-radius:999px;color:var(--lime-dim)}
+
+/* chapters */
+.chapter{display:grid;gap:36px}
+.ch-head{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start}
+.oid{font:800 clamp(56px,9vw,104px)/.85 var(--disp);color:transparent;-webkit-text-stroke:1px var(--lapis)}
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.verdict>div{background:var(--basalt-2);padding:18px 20px;display:grid;gap:6px;align-content:start}
+.verdict h4{margin:0;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--lime-dim)}
+.pill{justify-self:start;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:2px}
+.pill.ok{background:#1D3226;color:var(--ok)}.pill.open{background:#3A2D14;color:var(--open)}.pill.rej{background:#3B1E1C;color:var(--rej)}
+.arrowtxt{font:13px var(--mono);color:var(--lime-dim)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 48px}
+.cols ul{margin:0;padding-left:18px;display:grid;gap:10px}
+.cols li::marker{color:var(--lapis)}
+.src{font:12px/1.5 var(--mono);color:var(--lime-dim)}
+.kill{border-left:3px solid var(--rej);padding:4px 0 4px 16px}
+.ladder{display:grid;gap:8px}
+.rung{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rung b{font:600 13px var(--mono);color:var(--gold);font-variant-numeric:tabular-nums}
+
+/* figures */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.fig{grid-column:span 4;margin:0;display:grid;gap:8px}
+.fig.wide{grid-column:span 8}.fig.full{grid-column:1/-1}.fig.half{grid-column:span 6}
+@media(max-width:760px){.fig,.fig.wide,.fig.half{grid-column:1/-1}}
+.frame{position:relative;background:var(--basalt-3);border:1px dashed #3A4750;border-radius:2px;overflow:hidden;max-width:100%}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph{position:absolute;inset:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:14px;gap:8px;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(111,140,235,.05) 14px 15px)}
+.ph .tag{font:600 12px var(--mono);color:var(--lapis)}
+.ph .pr{font:12px/1.5 var(--mono);color:var(--lime-dim);overflow:auto;min-height:0;max-width:80ch}
+.ph button{justify-self:start;font:500 11px var(--mono);background:transparent;color:var(--lime);border:1px solid var(--line);padding:5px 9px;cursor:pointer}
+figcaption{font-size:13px;color:var(--lime-dim)}
+figcaption b{color:var(--lime);font-weight:500}
+
+/* atlantis */
+.verdict-big{display:grid;gap:14px;padding:clamp(24px,4vw,44px);background:radial-gradient(circle at 20% 0%,rgba(111,140,235,.14),transparent 60%),var(--basalt-2);border:1px solid var(--line)}
+.verdict-big .line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.check{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.check div{padding:16px;border:1px solid var(--line);display:grid;gap:6px}
+.check b{font:600 12px var(--mono);color:var(--gold)}
+
+/* timeline */
+.tl-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--basalt-2)}
+.tl{position:relative;min-width:980px;height:220px}
+.tl .axis{position:absolute;left:24px;right:24px;top:120px;height:2px;background:var(--line)}
+.tl .ev{position:absolute;top:0;transform:translateX(-50%);display:grid;justify-items:center;gap:4px;width:120px;text-align:center}
+.tl .dot3{position:absolute;top:115px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--lapis);box-shadow:0 0 12px var(--lapis)}
+.tl .ev span{font:11px/1.3 var(--mono);color:var(--lime-dim)}
+.tl .ev strong{font:500 12px/1.3 var(--sans)}
+
+.retired{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.retired div{background:var(--basalt);padding:14px 16px;font-size:14px;display:grid;gap:4px}
+.retired s{color:var(--lime-dim);text-decoration-color:var(--rej)}
+.close{text-align:left;display:grid;gap:22px}
+footer{padding-block:40px;border-top:1px solid var(--line);font-size:13px;color:var(--lime-dim);display:grid;gap:10px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--lime);color:var(--basalt);font:500 13px var(--sans);padding:10px 16px;border-radius:2px;z-index:20}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slab{transition:none}}
+</style>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="top">
+  <canvas id="core" aria-label="სამგანზომილებიანი სტრატიგრაფიული ბირთვი: ფენები და ქრონოლოგიის წერტილები"></canvas>
+  <div class="hint" id="hint">გადაათრიე — ბირთვი ბრუნავს</div>
+  <div class="w">
+    <div class="eyebrow">HISTORIA · Stage X · საბოლოო ეტაპი · 2026</div>
+    <h1>THE VERDICT<small>ისტორია არის ინფორმაცია, რომელიც ტრანსფორმაციებს გადაურჩა.</small></h1>
+    <p class="lead">104 მტკიცება. ოთხი ეტაპის აუდიტი. ხუთი ღია კითხვა, რომელიც ყველაფერს ცვლიდა. აქ ისინი დაიხურა, ან ზუსტად ითქვა, რა დახურავს მათ. ბოლოს კი ატლანტიდის განაჩენი.</p>
+    <div class="cta-row">
+      <a class="btn" href="#o01">ხუთი პასუხი</a>
+      <a class="btn ghost" href="#atlantis">ატლანტიდის განაჩენი</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ========== STATS ========== -->
+<section style="border-top:0;padding-top:48px">
+  <div class="w stack">
+    <div class="stats">
+      <div class="stat"><b>104</b><span>მტკიცება ID-ით, სტატუსით და kill condition-ით</span></div>
+      <div class="stat"><b style="color:var(--ok)">79</b><span>დადასტურებული ან ძლიერი მოდელი</span></div>
+      <div class="stat"><b style="color:var(--rej)">19</b><span>უარყოფილი, რომელიც ჩუმად ვერ დაბრუნდება</span></div>
+      <div class="stat"><b style="color:var(--open)">5 / 5</b><span>ღია კითხვა — პასუხით ან ზუსტი ტესტით</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MANIFESTO ========== -->
+<section>
+  <div class="w split">
+    <div class="stack">
+      <div class="eyebrow">მანიფესტი · HST-X-001 · HST-X-002</div>
+      <h2>ცივილიზაციები არ ქრება. ისინი იშლება.</h2>
+      <p class="lead">გენები, ინსტიტუტები, ტექნოლოგიები, მონუმენტები და ამბები სხვადასხვა სიჩქარით ცოცხლობს. ქვა რჩება, მშენებლის სახელი ქრება. ენა გადადის, ხალხი რჩება ადგილზე. HISTORIA ამ სხვაობებს ზომავს.</p>
+      <p class="muted">ორი წესი ყველაფერს მართავს: <b style="color:var(--lime)">ქრონოლოგია მსგავსებაზე მაღლა დგას</b> (HST-X-003) და <b style="color:var(--lime)">მითი ჩავარდნილ ქრონოლოგიას ვერ გადაარჩენს</b> (HST-X-004).</p>
+    </div>
+    <div class="gallery" data-slots="IMG-02"></div>
+  </div>
+</section>
+
+<!-- ========== METHOD ========== -->
+<section id="method">
+  <div class="w split">
+    <div class="stack">
+      <div class="eyebrow">მეთოდი</div>
+      <h2>ყოველ მტკიცებას აქვს ფასი: პირობა, რომელიც მას მოკლავს.</h2>
+      <p class="lead">მტკიცებულების სიძლიერე ექვს საფეხურად იზომება. ყველა მტკიცებას თან ახლავს მიკერძოების დროშა, კონტრარგუმენტი და <b>kill condition</b>: დაკვირვება, რომელიც მას გააუქმებდა.</p>
+      <div class="flags">
+        <span class="flag">PB · Preservation</span><span class="flag">SB · Sampling</span><span class="flag">NB · Narrative</span>
+        <span class="flag">RB · Researcher</span><span class="flag">CB · Chronology</span><span class="flag">EB · Ethnicity projection</span>
+      </div>
+    </div>
+    <div class="scale3d" aria-label="მტკიცებულების სკალა E0–E5">
+      <div class="slab" style="background:#233F8C;color:#EEF1FF"><b>E5</b><span>პირდაპირი: წარწერა, aDNA კავშირი, დათარიღებული თანმიმდევრობა</span></div>
+      <div class="slab" style="background:#3D58A8;color:#EEF1FF"><b>E4</b><span>ძლიერი დამოუკიდებელი თანხვედრა</span></div>
+      <div class="slab" style="background:#5670BE;color:#F4F6FF"><b>E3</b><span>მნიშვნელოვანი თანხვედრა: რამდენიმე დეტალი ემთხვევა</span></div>
+      <div class="slab" style="background:#7D92CF;color:#0D1114"><b>E2</b><span>თავსებადი: ქრონოლოგია და გეოგრაფია უშვებს</span></div>
+      <div class="slab" style="background:#A9B6DD;color:#0D1114"><b>E1</b><span>მსგავსება: საინტერესო, მაგრამ ზოგადი</span></div>
+      <div class="slab" style="background:#D5DAD6;color:#0D1114"><b>E0</b><span>დამოუკიდებელი მხარდაჭერა არ არის</span></div>
+    </div>
+  </div>
+  <div class="w" style="margin-top:36px"><div class="gallery" data-slots="IMG-03"></div></div>
+</section>
+
+<!-- ========== O-01 ========== -->
+<section id="o01">
+  <div class="w chapter">
+    <div class="ch-head">
+      <div class="oid" aria-hidden="true">01</div>
+      <div class="stack">
+        <div class="eyebrow">O-01 · Mitanni genetic bridge · HST-III-015 / 016 · პრიორიტეტი 100</div>
+        <h2>ღმერთები სირიაში, სტეპის ენაზე.</h2>
+        <p class="lead">შეუძლია თუ არა ძველ დნმ-ს იპოვოს ის ადამიანები, ვინც ხურიტულ სამეფოში ინდო-არიული ღმერთების სახელები და ცხენის ტერმინები მოიტანა?</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-04"></div>
+    <div class="verdict">
+      <div><h4>სტატუსი იყო</h4><span class="pill open">OPEN GAP</span></div>
+      <div><h4>სტატუსი ახლა</h4><span class="pill open">OPEN · ტესტი განსაზღვრულია</span><span class="arrowtxt">E5 ენისთვის · E0 დემოგრაფიისთვის</span></div>
+      <div><h4>პასუხი ერთი წინადადებით</h4><p>ენობრივი პაკეტი დადასტურებულია. მისი მატარებლების გენეტიკური კვალი ჯერ არავის უპოვია და, სავარაუდოდ, მცირე ელიტური ან სპეციალისტური ჯგუფი იყო.</p></div>
+    </div>
+    <div class="cols">
+      <div class="stack">
+        <h3>რა ვიცით</h3>
+        <ul>
+          <li><b>შუპილულიუმა I–შატივაზას ხელშეკრულება</b> (ძვ.წ. XIV ს.) მოწმეებად ასახელებს Mitra-ს, Varuna-ს, Indra-სა და Nāsatya-ებს, ვედური პანთეონის ბირთვს.</li>
+          <li><b>კიკულის ტექსტი</b> (ხეთური, ძვ.წ. XIV ს.) ეტლის ცხენის წვრთნისთვის ინდო-არიულ რიცხვით ტერმინებს იყენებს: <i>aika-, tera-, panza-, satta-, na-wartanna</i>.</li>
+          <li>მეფეთა სახელები (Tushratta, Artatama, Shattiwaza) და ტერმინი <i>maryannu</i> (ეტლოსანი ელიტა) იმავე ფენას ეკუთვნის.</li>
+          <li>ენა და პოლიტიკა ხურიტულია. ინდო-არიული ფენა <b>სუპერსტრატია</b>: სახელები, ღმერთები და ტექნიკური ლექსიკა, არა ყოველდღიური მეტყველება.</li>
+          <li>ალალახის (მიტანის ორბიტაში მყოფი ქალაქი) ძველმა დნმ-მა (Skourtanioti et al. 2020) შესამჩნევი სტეპური წვლილი არ აჩვენა. სეპტემბერი 2026-ის ძიებით, მიტანის ელიტური სამარხების პირდაპირი გენომი გამოქვეყნებული არ ჩანს.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <h3>რატომ იმალება კვალი</h3>
+        <ul>
+          <li><b>მასშტაბი:</b> თუ მატარებლები რამდენიმე ასეული ოჯახი იყო, მოსახლეობაში მათი წილი 1–2%-ზე ნაკლები იქნებოდა. ეს ჩვეულებრივი qpAdm მოდელის ზღვარს ქვემოთაა.</li>
+          <li><b>შერჩევა (SB):</b> გაანალიზებული ინდივიდები უმეტესად რიგითი მოსახლეობიდანაა. ელიტური და სამეფო სამარხები სისტემურად ნაკლებადაა.</li>
+          <li><b>დრო:</b> ძვ.წ. XVI–XIV საუკუნეებამდე რამდენიმე თაობაში შერევა კვალს აფერმკრთალებდა.</li>
+        </ul>
+        <div class="kill"><p><b>დაადასტურებს:</b> ელიტურ კონტექსტში (ეტლის სამარხი, სასახლის ნეკროპოლი) Steppe_MLBA-თან დაკავშირებული წინაპრობა ან Y-ხაზი R1a-Z93, IBD-კავშირით ცენტრალურ-აზიურ ან სამხრეთ-აზიურ ნიმუშებთან.</p></div>
+        <div class="kill"><p><b>მოკლავს (ხიდის მოდელს):</b> ათობით ელიტური ინდივიდი, რომლებშიც ეს კომპონენტი სრულად არ ჩანს. მაშინ პაკეტი კულტურული სესხება ყოფილა და არა ხალხის გადაადგილება.</p></div>
+        <p class="src">ტესტის ადგილები: Tell Brak · Nuzi · Tell Hamidiya · Alalakh ელიტური ფენა.</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-05,IMG-06,IMG-07"></div>
+  </div>
+</section>
+
+<!-- ========== O-02 ========== -->
+<section id="o02">
+  <div class="w chapter">
+    <div class="ch-head">
+      <div class="oid" aria-hidden="true">02</div>
+      <div class="stack">
+        <div class="eyebrow">O-02 · Caucasus pre-3500 BCE · HST-III-002 / 004 · პრიორიტეტი 98</div>
+        <h2>კავკასიის კლინი: სად დაიწყო ენა, რომელმაც ნახევარი მსოფლიო მოიცვა.</h2>
+        <p class="lead">როგორ შეიკრა ჩრდილოეთ კავკასიის მონადირეთა, ირანთან დაკავშირებული მიწათმოქმედთა და სტეპის ნაკადები მტკვარ-არაქსამდე და მის პარალელურად?</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-08"></div>
+    <div class="verdict">
+      <div><h4>სტატუსი იყო</h4><span class="pill open">OPEN · 98/100</span></div>
+      <div><h4>სტატუსი ახლა</h4><span class="pill ok">ჩრდილოეთი: STRONG MODEL</span><span class="pill open">სამხრეთი: SAMPLING GAP</span></div>
+      <div><h4>პასუხი ერთი წინადადებით</h4><p>ჩრდილოეთ ნაწილი 2025 წელს გადაწყდა: კავკასია–ქვემო ვოლგის (CLV) კლინი. სამხრეთ კავკასია ძვ.წ. 3500-მდე ჯერ კიდევ იშვიათად არის შერჩეული.</p></div>
+    </div>
+    <div class="cols">
+      <div class="stack">
+        <h3>რა შეიცვალა 2025 წელს</h3>
+        <ul>
+          <li><b>Lazaridis et al., Nature 639 (2025):</b> 435 ინდივიდი, ძვ.წ. 6400–2000. გამოიყო <b>CLV კლინი</b>: მოსახლეობა ჩრდილოეთ კავკასიასა და ქვემო ვოლგას შორის, ძვ.წ. 4500–3500.</li>
+          <li>იამნაიას წინაპრობის <b>≈80%</b> CLV-იდანაა. ბრინჯაოს ხანის ანატოლიელებს (ხეთურად მოლაპარაკეებს) <b>≥10%</b> CLV აქვთ, იამნაიას კვალი კი არა.</li>
+          <li>ავტორთა ინტერპრეტაციით, CLV-ის ხალხი <b>ინდო-ანატოლიური</b> პრაენის მატარებელია, ძვ.წ. 4400–4000 შორის.</li>
+          <li><b>Southern Arc (Science, 2022):</b> სამხრეთ კავკასია, ანატოლია და ირანი ხანგრძლივ უწყვეტობასა და განმეორებით შერევას აჩვენებს. ეს HST-III-002-ს ამაგრებს.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <h3>რაც არ იცვლება</h3>
+        <ul>
+          <li><b>HST-III-003 რჩება:</b> CHG წინაპრობა ≠ ქართული ეთნოსი ≠ ქართველური ენა. დნმ ენას პირდაპირ ვერ ასახელებს (HST-III-005).</li>
+          <li>ჩრდილოეთ კავკასიის კლინი ახლა ძლიერი მოდელია. სამხრეთი (აღმ. საქართველო, აზერბაიჯანი, ჩრდ.-დას. ირანი) ძვ.წ. 3500-მდე მწირი ნიმუშებითაა წარმოდგენილი. სწორედ აქ დევს დარჩენილი კითხვა.</li>
+          <li>მტკვარ-არაქსი: ხალხიცა და ადგილობრივი მიღებაც (HST-III-012). ერთ ერად მისი დანახვა უარყოფილია (HST-R-009).</li>
+        </ul>
+        <div class="kill"><p><b>მოკლავს:</b> მკვრივი სამხრეთ-კავკასიური ტრანსექტი, რომელიც ძვ.წ. 5000–3500 შორის სრულ ჩანაცვლებას აჩვენებს, უწყვეტობა + შერევის ნაცვლად.</p></div>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-09,IMG-10"></div>
+  </div>
+</section>
+
+<!-- ========== O-03 ========== -->
+<section id="o03">
+  <div class="w chapter">
+    <div class="ch-head">
+      <div class="oid" aria-hidden="true">03</div>
+      <div class="stack">
+        <div class="eyebrow">O-03 · Maritime capability chronology · HST-X-007 · პრიორიტეტი 100</div>
+        <h2>ზღვა ბარიერი არასდროს ყოფილა.</h2>
+        <p class="lead">როდის ჩნდება განმეორებადი საზღვაო გადაადგილების ყოველი საფეხურის პირველი სანდო მტკიცებულება?</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-11"></div>
+    <div class="verdict">
+      <div><h4>სტატუსი იყო</h4><span class="pill open">OPEN · 100/100</span></div>
+      <div><h4>სტატუსი ახლა</h4><span class="pill ok">საათი აშენებულია</span><span class="arrowtxt">HST-X-007 ისევ OPEN / LOW DIRECT SUPPORT</span></div>
+      <div><h4>პასუხი ერთი წინადადებით</h4><p>ღია ზღვის დაგეგმილი გადაკვეთა სულ მცირე ≈50 ათასი წლისაა, ალბათ ≈60–65-ისაც. ტექნიკური უნარი ქსელის ჰიპოთეზას არ ზღუდავს, მტკიცებულების ნაკლებობა ზღუდავს.</p></div>
+    </div>
+    <div class="stack">
+      <h3>საზღვაო საათი — ხუთი საფეხური</h3>
+      <div class="ladder">
+        <div class="rung"><b>&gt;1 მლნ წ.</b><span><b>L1 · კუნძული მხედველობის არეში.</b> ფლორესზე Homo erectus. გადასვლა შეიძლება შემთხვევითი ყოფილიყო (ტივი, ცუნამის ნამსხვრევები). სტატუსი: PLAUSIBLE.</span></div>
+        <div class="rung"><b>≈130 ათ. წ.?</b><span><b>L2 · ხმელთაშუა ზღვის ადრეული გადაკვეთა.</b> კრეტა, პლაკიასი: ქვის იარაღი ტერასებზე. დათარიღება სადავოა და ფართოდ მიღებული არ არის. სტატუსი: WEAK/OPEN.</span></div>
+        <div class="rung"><b>≈65–50 ათ. წ.</b><span><b>L3 · ღია ზღვა, დაგეგმილი მიგრაცია.</b> საჰული (ავსტრალია–ახალი გვინეა) მხოლოდ ზღვით მიიღწევა. მაჯედბები ≈65 ათ. წ.; 2025 წლის გენეტიკური კვლევა (Science Advances) ≈60 ათ. წ.-ს, ორ მარშრუტს ასახელებს; კონკურენტი „მოკლე ქრონოლოგია“ ≈47–51 ათ. წ.-ია. სტატუსი: SUPPORTED (≥50 ათ. წ.).</span></div>
+        <div class="rung"><b>≈35–12 ათ. წ.</b><span><b>L4 · განმეორებადი ნაოსნობა და რესურსის ტრანსპორტი.</b> რიუკიუს კუნძულები, ≈35–30 ათ. წ. (ექსპერიმენტულმა ამოღებულმა ნავმა ტაივანი–იონაგუნის გადაკვეთა შეძლო). მელოსის ობსიდიანი ფრანხთის გამოქვაბულში, ≈12–11 ათ. წ. კვიპროსი, ≈12–10.5 ათ. წ. სტატუსი: SUPPORTED.</span></div>
+        <div class="rung"><b>ძვ.წ. 1300 → ახ.წ. 1300</b><span><b>L5 · შორეული ღია ოკეანე.</b> ლაპიტა (ბისმარკი → ტონგა/სამოა, ≈3000 წ.), შემდეგ აღმოსავლეთ პოლინეზია და ახალი ზელანდია (≈ახ.წ. 1250–1300). სტატუსი: SUPPORTED.</span></div>
+      </div>
+      <div class="kill"><p><b>რას ნიშნავს ეს ატლანტიდისთვის:</b> „ვერ შეძლებდნენ ზღვაზე სიარულს“ ქსელის ჰიპოთეზის საწინააღმდეგო არგუმენტი არ არის. საწინააღმდეგო არგუმენტი მტკიცებულების ხასიათია: სადაც ქსელი რეალურად არსებობდა (ლაპიტა, ობსიდიანი), მან განმეორებადი პაკეტი დატოვა. HST-X-005.</p></div>
+    </div>
+    <div class="gallery" data-slots="IMG-12,IMG-13,IMG-14"></div>
+  </div>
+</section>
+
+<!-- ========== O-04 ========== -->
+<section id="o04">
+  <div class="w chapter">
+    <div class="ch-head">
+      <div class="oid" aria-hidden="true">04</div>
+      <div class="stack">
+        <div class="eyebrow">O-04 · Calibrated deep oral memory · HST-II-014 · პრიორიტეტი 100</div>
+        <h2>რამდენ ხანს ცოცხლობს ამბავი, რომელიც ჯერ კიდევ შეიძლება გადამოწმდეს?</h2>
+        <p class="lead">მითი ღრმა დროის მტკიცებულება რომ გახდეს, ჯერ უნდა გავზომოთ, რამდენ ხანს ინარჩუნებს ზეპირი გადმოცემა ფალსიფიცირებად დეტალს.</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-15"></div>
+    <div class="verdict">
+      <div><h4>სტატუსი იყო</h4><span class="pill open">OPEN / STAGE VII TEST</span></div>
+      <div><h4>სტატუსი ახლა</h4><span class="pill ok">კალიბრაცია: ≈7–10 ათ. წ. შესაძლებელია</span><span class="pill open">შეკუმშვა: OPEN</span></div>
+      <div><h4>პასუხი ერთი წინადადებით</h4><p>ლანდშაფტზე მიბმულმა, მკაცრად გადაცემულმა ამბავმა შეიძლება ≈7 ათას წელზე მეტი გაძლოს. ეს ხდება კონკრეტულ კულტურებში და კონკრეტულ პირობებში, არა ზოგადად.</p></div>
+    </div>
+    <div class="cols">
+      <div class="stack">
+        <h3>კალიბრირებული შემთხვევები</h3>
+        <ul>
+          <li><b>ავსტრალიის სანაპირო:</b> Nunn & Reid (Australian Geographer, 2015/16) აანალიზებენ 21 ამბავს 21 ადგილიდან, სადაც სანაპირო ახლანდელზე შორს აღიწერება. დაბრუნებული ზღვის დონის დათარიღებით ეს ≈7,250–13,070 წლის წინაა.</li>
+          <li><b>კლამატი და მაზამა:</b> კრატერის ტბის (ორეგონი) წარმოშობის ამბავი, ლაოსა და სკელის ბრძოლა, ≈7,700 წლის წინანდელ ამოფრქვევას უკავშირდება.</li>
+          <li><b>კონტრაქცია:</b> ორივე შემთხვევაში გადმოცემა <i>მდგომარეობას</i> ინახავს (სადაც იყო სანაპირო, რომ მთა ჩაინგრა). ხანგრძლივობას არ ინახავს: ათასწლოვანი აწევა ერთ ამბად იქცევა.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <h3>Stage VII-ის ოთხი პირობა</h3>
+        <ul>
+          <li><b>1 · დამოუკიდებელი თარიღი:</b> მოვლენა გეოლოგიურად დათარიღებულია, მითისგან დამოუკიდებლად.</li>
+          <li><b>2 · კონტაქტამდელი ჩანაწერი:</b> ამბავი ჩაწერილია, სანამ მთქმელი მეცნიერულ ახსნას გაიგებდა.</li>
+          <li><b>3 · დამოუკიდებელი მთქმელები:</b> რამდენიმე ერთმანეთისგან დამოუკიდებელი თემი ერთსა და იმავე კონკრეტულ დეტალს ინახავს.</li>
+          <li><b>4 · ფალსიფიცირებადი დეტალი:</b> ადგილი, მიმართულება ან რიგითობა, არა ზოგადი „დიდი წყალი“.</li>
+        </ul>
+        <div class="kill"><p><b>მოკლავს (შეკუმშვის ჰიპოთეზას):</b> კალიბრირებული შემთხვევები, რომლებიც მოვლენის ხანგრძლივობას სისტემურად ზუსტად ინახავს.</p></div>
+        <p class="src">გამორიცხულია: „ყველა წარღვნის მითი ერთ მოვლენას ინახავს“ (HST-R-017).</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-16,IMG-17"></div>
+  </div>
+</section>
+
+<!-- ========== O-05 ========== -->
+<section id="o05">
+  <div class="w chapter">
+    <div class="ch-head">
+      <div class="oid" aria-hidden="true">05</div>
+      <div class="stack">
+        <div class="eyebrow">O-05 · Submerged detectability · HST-X-005 / 007 · პრიორიტეტი 100</div>
+        <h2>ზღვამ 120 მეტრი მიწა წაიღო. რა დარჩა ფსკერზე?</h2>
+        <p class="lead">გვიანპლეისტოცენურ სანაპირო ქსელს რა უნდა დაეტოვებინა მას შემდეგ, რაც ბოლო გამყინვარების შემდეგ ზღვის დონემ ≈120–130 მ-ით აიწია?</p>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-18"></div>
+    <div class="verdict">
+      <div><h4>სტატუსი იყო</h4><span class="pill open">OPEN · Stage IX</span></div>
+      <div><h4>სტატუსი ახლა</h4><span class="pill ok">გამოვლენადობა დადასტურებულია</span><span class="arrowtxt">სიცარიელე ნაწილობრივ ინფორმაციულია</span></div>
+      <div><h4>პასუხი ერთი წინადადებით</h4><p>ჩაძირული პრეისტორია მოიძებნება: სოფლები, ბილიკები, დნმ, მღვიმეები. მაგრამ თითოეული აღმოჩენა ლოკალურ ადამიანებს აჩვენებს და არა ცივილიზაციას, რომლის ცოდნაც დაიკარგა.</p></div>
+    </div>
+    <div class="cols">
+      <div class="stack">
+        <h3>ფსკერმა რაც უკვე მოგვცა</h3>
+        <ul>
+          <li><b>ატლიტ-იამი</b> (ისრაელი, 8–12 მ): ≈9 ათასი წლის ნეოლითური სოფელი ჭებით და ქვის წრით.</li>
+          <li><b>ბოულდნორ-კლიფი</b> (უაითის კუნძული, ≈11 მ): ≈8 ათასი წლის მეზოლითური ხის პლატფორმა. ნალექის დნმ-ში ხორბლის კვალი (Smith et al., Science 2015), რაც სადავოა.</li>
+          <li><b>დოგერლენდი</b> (ჩრდილოეთის ზღვა): ტრალით ამოღებული ძვლის იარაღი, ადამიანის ნაშთები, ლანდშაფტის სეისმური რუკები. Brown Bank-ის პროექტები.</li>
+          <li><b>კოსკერის მღვიმე</b> (მარსელი): შესასვლელი ზღვის ქვეშაა, შიგნით პალეოლითური ხელოვნებაა.</li>
+          <li><b>პავლოპეტრი</b> (ბერძნეთი): ბრინჯაოს ხანის ქალაქის ქუჩების გეგმა ჩაძირულ თხელ წყალში.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <h3>რას დატოვებდა ნამდვილი ქსელი</h3>
+        <ul>
+          <li>ჩაძირული ნიჟარის გროვები და ქვის გაბნევები <b>რამდენიმე</b> შელფზე, ერთ ადგილზე არა.</li>
+          <li>მასალის წყაროს კვალი (ობსიდიანი, კაჟი) <b>კუნძულებს შორის</b>, თანამედროვე სანაპიროზე გამოსული.</li>
+          <li>ტექნოლოგიური ნახტომი <b>ხმელეთის</b> მეზობლებთან, რომლებიც არ ჩაძირულა.</li>
+          <li>გენეტიკური სიგნალი <b>რამდენიმე სანაპირო</b> მოსახლეობაში ერთდროულად.</li>
+        </ul>
+        <div class="kill"><p><b>მოკლავს (სკეპტიკურ პოზიციას):</b> ორ ან მეტ შელფზე ≥12 ათასი წლის ჩაძირული კომპლექსი, რომლის ტექნოლოგია ან ორგანიზაცია ხმელეთის თანადროულ კონტექსტს აშკარად აღემატება.</p></div>
+      </div>
+    </div>
+    <div class="gallery" data-slots="IMG-19,IMG-20"></div>
+  </div>
+</section>
+
+<!-- ========== ATLANTIS VERDICT ========== -->
+<section id="atlantis">
+  <div class="w chapter">
+    <div class="stack">
+      <div class="eyebrow">Stage X · Atlantis adversarial verdict · ჯაჭვი D-ის ბოლო რგოლი</div>
+      <h2>ატლანტიდა: განაჩენი.</h2>
+      <p class="lead">ხუთივე პასუხი ერთ კითხვას ემსახურება: სჭირდება თუ არა I–IV ეტაპის მტკიცებულებას დაკარგული მსოფლიო ცივილიზაცია? სამი ვერსია ცალ-ცალკე შემოწმდა.</p>
+    </div>
+    <div class="gallery" data-slots="IMG-21"></div>
+    <div class="verdict-big">
+      <div class="line"><div><h3>ატლანტიდა, როგორც ერთი, გლობალურად დომინანტი, ტექნოლოგიურად უფრო მაღალი ცივილიზაცია</h3><p class="muted">E1 · არცერთი მრავალმოწმიანი პაკეტი; სადაც ქსელები არსებობდა (ლაპიტა, ობსიდიანი), მათ კვალი დატოვეს · HST-X-008</p></div><span class="pill rej">UNSUPPORTED</span></div>
+      <div class="line"><div><h3>გვიანპლეისტოცენური სანაპირო ქსელი, ტექნოლოგიურად ჩვეულებრივი, ახლა ფსკერზე</h3><p class="muted">E2 · ნაოსნობის უნარი დადასტურებულია (O-03), ფსკერი გამოვლენადია (O-05), მაგრამ ქსელის პირდაპირი მტკიცებულება არ არის · HST-X-007</p></div><span class="pill open">SIMULATION / OPEN</span></div>
+      <div class="line"><div><h3>ატლანტიდა, როგორც პლატონის ლიტერატურული კონსტრუქცია რეალური კატასტროფების მეხსიერებიდან</h3><p class="muted">E3 · „ტიმეოსი“ და „კრიტიასი“ (ძვ.წ. ≈360) · თერას ამოფრქვევა (ძვ.წ. XVII–XVI ს.) · ჰელიკეს ჩაძირვა (ძვ.წ. 373, პლატონის სიცოცხლეში) · HST-X-009</p></div><span class="pill ok">STRONGEST MODEL</span></div>
+      <p style="margin-top:8px"><b>განაჩენი:</b> ატლანტიდა არ არის საჭირო, რომ ავხსნათ ის, რაც I–IV ეტაპებმა აჩვენა (HST-X-006). ყველაზე ძლიერი ახსნა ტექსტია: დიდი ფილოსოფოსის პოლიტიკური იგავი, აგებული რეალური ჩაძირვის ამბებზე. ეს ღარიბი დასკვნა არ არის. ესაა მითის ანატომია და HISTORIA-ს მთავარი თეზისის მაგალითი: ინფორმაცია გადარჩა, მისი მნიშვნელობა გარდაიქმნა.</p>
+    </div>
+    <div class="check">
+      <div><b>რა გადააბრუნებდა განაჩენს · 1</b><p>ჩაძირული კომპლექსი ორ ან მეტ შელფზე, ტექნოლოგიით, რომელიც თანადროულ ხმელეთს აღემატება (O-05).</p></div>
+      <div><b>2</b><p>მასალის წყაროს კვალი, რომელიც ≥12 ათ. წ.-ზე ადრე კონტინენტებს შორის აკავშირებს (O-03).</p></div>
+      <div><b>3</b><p>დამოუკიდებელი, კონტაქტამდელი გადმოცემები, რომლებიც ერთსა და იმავე კონკრეტულ დეტალს ინახავს (O-04).</p></div>
+      <div><b>4</b><p>გენეტიკური სიგნალი, რომელიც სანაპირო მოსახლეობებს ერთდროულად აკავშირებს და ხმელეთით არ იხსნება (O-01/02-ის მეთოდით).</p></div>
+    </div>
+    <div class="gallery" data-slots="IMG-22"></div>
+  </div>
+</section>
+
+<!-- ========== TIMELINE ========== -->
+<section id="timeline">
+  <div class="w stack">
+    <div class="eyebrow">ქრონოლოგია · საკონტროლო ჩარჩო</div>
+    <h2>70 ათასი წელი ერთ ხაზზე.</h2>
+    <p class="muted">მასშტაბი ლოგარითმულია: დღეს უფრო ახლოს, დრო უფრო მჭიდროდ. გვერდზე გადაათრიე.</p>
+    <div class="tl-wrap" tabindex="0" aria-label="ქრონოლოგიის ხაზი"><div class="tl" id="tl"><div class="axis"></div></div></div>
+  </div>
+</section>
+
+<!-- ========== RETIRED ========== -->
+<section id="retired">
+  <div class="w chapter">
+    <div class="split">
+      <div class="stack">
+        <div class="eyebrow">პენსიაზე გასული მითები · HST-R-001…018</div>
+        <h2>ეს ამბები აღარ დაბრუნდება ნარატივში.</h2>
+        <p class="lead">უარყოფა შედეგია, არა დანაკარგი. ყოველი ქვემოთ ჩამოთვლილი მტკიცება გადამოწმდა და ჩავარდა.</p>
+      </div>
+      <div class="gallery" data-slots="IMG-23"></div>
+    </div>
+    <div class="retired">
+      <div><s>ატლანტიდა ახალგაზრდა დრიასის იმპაქტმა გაანადგურა</s><span class="src">SIMULATION ONLY</span></div>
+      <div><s>ახალგაზრდა დრიასის იმპაქტი სამეცნიერო კონსენსუსია</s><span class="src">REJECTED</span></div>
+      <div><s>4.2 ka — ერთი გლობალური სინქრონული კოლაფსი</s><span class="src">REJECTED</span></div>
+      <div><s>„ზღვის ხალხებმა“ მარტო დაანგრიეს ბრინჯაოს ხანა</s><span class="src">REJECTED</span></div>
+      <div><s>იამნაია ცხენოსანი ომით გაფართოვდა</s><span class="src">REJECTED</span></div>
+      <div><s>CHG წინაპრობა = ქართული ეთნოსი</s><span class="src">REJECTED</span></div>
+      <div><s>R1a-Z93 = „არიელი ხალხი“</s><span class="src">REJECTED</span></div>
+      <div><s>გიგანტური ქვები = დაკარგული მანქანები</s><span class="src">REJECTED</span></div>
+      <div><s>პუმა პუნკუს ინდუსტრიული ჩარხი სჭირდებოდა</s><span class="src">REJECTED</span></div>
+      <div><s>მსგავსი პირამიდები = ერთი წყარო-ცივილიზაცია</s><span class="src">REJECTED</span></div>
+      <div><s>ყველა წარღვნის მითი ერთ მოვლენას ინახავს</s><span class="src">REJECTED</span></div>
+      <div><s>ყოველი ძველი ორიენტაცია ასტრონომიული კოდია</s><span class="src">REJECTED</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CLOSE ========== -->
+<section id="close">
+  <div class="w split">
+    <div class="close">
+      <div class="eyebrow">Illuminismo · HISTORIA</div>
+      <h2>ყველაზე დიდი საიდუმლო ისაა, რამდენი გადარჩა.</h2>
+      <p class="lead">HISTORIA არ ეძებს დაკარგულ ოქროს ხანას. ის აჩვენებს, როგორ გადის ინფორმაცია კოლაფსში, ზღვაში, თაობებში და ენებში, და როგორ იცვლის ფორმას ისე, რომ ბოლომდე არ ქრება.</p>
+      <div class="cta-row"><a class="btn" href="#top">თავიდან</a><a class="btn ghost" href="#o01">ხუთი პასუხი</a></div>
+    </div>
+    <div class="gallery" data-slots="IMG-24"></div>
+  </div>
+</section>
+</main>
+
+<footer class="w">
+  <p><b>წყაროები:</b> Lazaridis et al., „The genetic origin of the Indo-Europeans“, Nature 639 (2025) · Lazaridis et al., „The genetic history of the Southern Arc“, Science (2022) · Skourtanioti et al., Cell (2020) · Nunn & Reid, Australian Geographer (2015/16) · Smith et al., „Sedimentary DNA from a submerged site…“, Science (2015) · Science Advances (2025), საჰულის ≈60 ათ. წ. გენეტიკური დათარიღება · HISTORIA Stage 4.5 Master Claim Ledger.</p>
+  <p>ილუსტრაციები რეკონსტრუქციებია, არა არტეფაქტების ფოტოები. სადაც თარიღი სადავოა, ტექსტი ამას პირდაპირ ამბობს.</p>
+</footer>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script type="application/json" id="imgs">
+[
+{"id":"IMG-01","size":"wide","ratio":"16/9","cap":"საკვანძო ვიზუალი — სტრატიგრაფიული ბირთვი","prompt":"A monumental vertical core sample of Earth sliced open like a museum exhibit, floating in darkness; each stratum holds miniature ruins of a different era — Stone Age hearths at the bottom, a megalithic circle, a Bronze Age citadel, a Roman arch, a medieval tower, a modern data centre at the top; thin lapis-blue light threads rise through all layers connecting them; cinematic, volumetric light, 35mm film grain"},
+{"id":"IMG-02","size":"full","ratio":"4/5","cap":"მანიფესტი — მონუმენტი რჩება, სახელი ქრება","prompt":"A weathered megalithic stone circle at blue hour on a grassy plain, faint ghostly silhouettes of its original builders dissolving into mist between the stones, carved marks eroding into sand-like particles drifting away in the wind; melancholic, reverent atmosphere, cinematic wide shot"},
+{"id":"IMG-03","size":"full","ratio":"21/9","cap":"მეთოდი — არქეოლოგის მაგიდა, მტკიცებულების ექვსი უჯრა","prompt":"Overhead view of an archaeologist's dark stone worktable with six labelled wooden trays in a row, each holding more solid evidence than the last: a vague sketch, a pottery sherd, a stratified soil sample, a radiocarbon vial, a DNA sequencing plate, a clay tablet with an inscription; brass calipers, index cards, soft raking light; no readable text"},
+{"id":"IMG-04","size":"full","ratio":"21/9","cap":"O-01 — მიტანის ეტლი ზემო მესოპოტამიის ველზე, ძვ.წ. XIV ს.","prompt":"A light two-wheeled war chariot with spoked wheels pulled by two horses racing across the dry plains of northern Mesopotamia in the 14th century BCE, a charioteer in Hurrian-style dress, a mudbrick tell city on the horizon, dust lit by low golden sun; historically grounded reconstruction, epic cinematic composition"},
+{"id":"IMG-05","size":"half","ratio":"4/3","cap":"O-01 — სახელმწიფო ხელშეკრულების თიხის ფირფიტა","prompt":"Close-up of a large fired clay tablet densely covered in cuneiform script resting on linen in a museum conservation lab, raking side light revealing the wedge impressions, a gloved hand holding a magnifier; archival, precise, shallow depth of field, no legible modern text"},
+{"id":"IMG-06","size":"half","ratio":"4/3","cap":"O-01 — კიკულის წვრთნა: ეტლის ცხენები","prompt":"Late Bronze Age horse trainer walking a pair of lean chariot horses in a long training circuit at dawn beside a river, stable enclosure of reeds and mudbrick in background, breath visible in the cold air; naturalistic historical reconstruction"},
+{"id":"IMG-07","size":"full","ratio":"21/9","cap":"O-01 — ტესტი: ელიტური სამარხიდან ძველი დნმ","prompt":"Split-scene: on the left, an excavated Late Bronze Age elite tomb with a skeleton, bronze horse bits and chariot fittings in situ under work lights; on the right, a clean-room ancient DNA lab where a technician in full white suit drills bone powder from a petrous bone; lapis-blue lab light meeting warm earth tones"},
+{"id":"IMG-08","size":"full","ratio":"21/9","cap":"O-02 — კავკასიონი და სტეპის დერეფანი","prompt":"Aerial panoramic view from the snow peaks of the Greater Caucasus looking north onto the endless steppe toward the lower Volga, a faint river of light tracing a migration corridor across the landscape, ancient kurgan mounds dotting the grassland; painterly realism, vast scale"},
+{"id":"IMG-09","size":"wide","ratio":"16/9","cap":"O-02 — CLV კლინი, ძვ.წ. 4500–3500 (რუკა-ილუსტრაცია)","prompt":"Illustrated antique-style relief map of the region between the Caucasus mountains, the Caspian Sea, the Black Sea and the Volga, rendered as a 3D clay model, a glowing gradient band stretching from the North Caucasus to the Lower Volga, small settlement markers; museum diorama aesthetic, no readable labels"},
+{"id":"IMG-10","size":"","ratio":"4/5","cap":"O-02 — მტკვარ-არაქსის შავპრიალა კერამიკა","prompt":"Museum photograph of an Early Bronze Age Kura-Araxes black burnished pottery jar with incised spiral decoration, red-brown interior visible at the rim, on a basalt plinth against a dark background, single soft spotlight"},
+{"id":"IMG-11","size":"full","ratio":"21/9","cap":"O-03 — პირველი ღია ზღვის გადაკვეთა, საჰული","prompt":"A small group of Paleolithic people paddling a bamboo raft across a calm open strait at dawn, a distant mountainous island barely visible on the horizon, smoke from a fire rising on the far shore, tropical sea, sense of courage and unknown; cinematic, photoreal, no modern elements"},
+{"id":"IMG-12","size":"wide","ratio":"16/9","cap":"O-03 — საჰული და სუნდა ბოლო გამყინვარებისას","prompt":"Scientific-art relief rendering of Southeast Asia and Australia at the Last Glacial Maximum, with exposed Sunda and Sahul continental shelves in lighter tones, today's coastlines as faint ghost lines, narrow sea gaps of Wallacea highlighted with small raft icons; elegant cartographic style, no readable text"},
+{"id":"IMG-13","size":"","ratio":"4/5","cap":"O-03 — მელოსის ობსიდიანი","prompt":"Glossy black obsidian cores and blades from Melos arranged on a wet beach rock, a primitive reed boat pulled onto the shore behind, Aegean evening light glinting on the volcanic glass; detailed macro realism"},
+{"id":"IMG-14","size":"full","ratio":"21/9","cap":"O-03 — ლაპიტა: შორეული ოკეანის ნაოსნები","prompt":"A double-hulled voyaging canoe with a crab-claw sail crossing the open Pacific at golden hour, navigators reading the swells and stars, Lapita dentate-stamped pottery stored on deck; epic, respectful depiction of ancient Pacific seafarers"},
+{"id":"IMG-15","size":"full","ratio":"21/9","cap":"O-04 — მთქმელი და ძველი სანაპირო","prompt":"An elder telling a story by a night fire on an Australian coastal headland, children and adults listening; behind them the sea is shown as a translucent double exposure revealing the ancient coastline and dry plains that existed before the sea rose; respectful, warm firelight against deep blue night"},
+{"id":"IMG-16","size":"half","ratio":"4/3","cap":"O-04 — მაზამას ამოფრქვევა და კრატერის ტბა","prompt":"The cataclysmic eruption of a snow-capped volcano 7,700 years ago in the Cascade Range, a colossal ash column lit from within, ancient people watching from a distant ridge; paired as a faint overlay with the calm deep-blue caldera lake that formed later"},
+{"id":"IMG-17","size":"half","ratio":"4/3","cap":"O-04 — ზღვის დონის მრუდი, როგორც ლანდშაფტი","prompt":"A sculptural 3D landscape where the sea-level rise curve of the last 20,000 years is carved as a terraced cliff, each terrace holding tiny scenes of people moving inland; minimal, elegant, museum installation style, lapis-blue water"},
+{"id":"IMG-18","size":"full","ratio":"21/9","cap":"O-05 — მყვინთავი ჩაძირულ ნეოლითურ სოფელზე","prompt":"A scuba diver with a lamp hovering over a submerged Neolithic stone circle and house foundations on a sandy sea floor at 10 metres depth, shafts of sunlight piercing turquoise water, fish around ancient stones; underwater archaeology realism"},
+{"id":"IMG-19","size":"wide","ratio":"16/9","cap":"O-05 — დოგერლენდი, მეზოლითი","prompt":"Reconstruction of Doggerland 9,000 years ago: a lush lowland of rivers, marshes and forest where the North Sea is today, Mesolithic hunter-gatherers fishing from a dugout canoe, a faint future sea horizon creeping in; soft morning mist, painterly realism"},
+{"id":"IMG-20","size":"","ratio":"4/5","cap":"O-05 — ბოულდნორ-კლიფის ხის პლატფორმა","prompt":"Underwater close-up of preserved worked timbers of an 8,000-year-old wooden platform emerging from a silty seabed cliff, archaeologist's measuring tape and scale bar beside it, murky green English Channel water with a diver's torch beam"},
+{"id":"IMG-21","size":"full","ratio":"21/9","cap":"Stage X — ატლანტიდა, როგორც ტექსტი","prompt":"An ancient Greek philosopher writing on a papyrus scroll at night by oil lamp; the reflection in a bronze mirror behind him shows a burning volcanic island and a sinking coastal city, as if the story is being assembled from memories of real disasters; chiaroscuro, painterly, profound"},
+{"id":"IMG-22","size":"full","ratio":"21/9","cap":"Stage X — ჰელიკეს ჩაძირვა, ძვ.წ. 373","prompt":"A classical Greek coastal city on the Gulf of Corinth sinking into the sea during an earthquake at night, temples collapsing, waves surging over the agora, a statue of a sea god toppling into water; dramatic, historically grounded, storm light"},
+{"id":"IMG-23","size":"full","ratio":"4/5","cap":"პენსიაზე გასული მითები — მუზეუმის ვიტრინა","prompt":"A dark museum cabinet of curiosities labelled with tiny brass plates, holding symbolic objects of debunked myths: a giant's oversized stone tool, a toy flying machine, a crystal skull replica, a map of a mythical sunken continent, each under a glass dome with a small red wax seal; ironic, elegant, still life"},
+{"id":"IMG-24","size":"full","ratio":"4/5","cap":"დასასრული — კაცობრიობის არქივი","prompt":"An infinite vertical library-archive carved into living rock, shelves holding clay tablets, scrolls, codices, hard drives and DNA vials side by side, a single beam of lapis-blue light descending through the centre, a lone reader on a stone bridge; awe, continuity, cinematic"}
+]
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ---------- image slots ---------- */
+const IMGS = JSON.parse(document.getElementById('imgs').textContent);
+const STYLE = "Style: cinematic archaeological realism, muted limestone and basalt palette with lapis-blue accents, volumetric light, subtle 35mm film grain, no text, no watermark, no logos.";
+const byId = Object.fromEntries(IMGS.map(i => [i.id, i]));
+const toast = t => { const el = document.getElementById('toast'); el.textContent = t; el.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => el.hidden = true, 1800); };
+function slot(i){
+  const f = document.createElement('figure');
+  f.className = 'fig ' + (i.size || '');
+  f.innerHTML = `<div class="frame" style="aspect-ratio:${i.ratio}">
+      <div class="ph"><span class="tag">${i.id} · ${i.ratio.replace('/',':')}</span><span class="pr">${i.prompt}</span><button type="button">დააკოპირე პრომპტი</button></div>
+      <img alt="${i.cap}" loading="lazy" src="historia-img/${i.id}.png">
+    </div><figcaption><b>${i.id}</b> · ${i.cap}</figcaption>`;
+  const img = f.querySelector('img');
+  img.addEventListener('load', () => f.querySelector('.ph').hidden = true);
+  img.addEventListener('error', () => img.hidden = true);
+  f.querySelector('button').addEventListener('click', () => {
+    const txt = i.prompt + ". " + STYLE + " Aspect ratio " + i.ratio.replace('/',':') + ".";
+    navigator.clipboard?.writeText(txt).then(() => toast('პრომპტი დაკოპირდა'), () => { const r = document.createRange(); r.selectNodeContents(f.querySelector('.pr')); getSelection().removeAllRanges(); getSelection().addRange(r); toast('მონიშნულია — დააკოპირე ხელით'); });
+  });
+  return f;
+}
+document.querySelectorAll('[data-slots]').forEach(g => g.dataset.slots.split(',').forEach(id => byId[id] && g.appendChild(slot(byId[id]))));
+// IMG-01 lives right after hero stats
+(() => { const s = document.querySelector('.stats').parentElement; const g = document.createElement('div'); g.className = 'gallery'; g.style.marginTop = '14px'; g.appendChild(slot(byId['IMG-01'])); g.firstChild.className = 'fig full'; s.appendChild(g); })();
+
+/* ---------- timeline (log scale, years before 2000) ---------- */
+const EV = [
+  [70000,'≈70 ათ.','Toba'],[60000,'≈65–50 ათ.','საჰულის გადაკვეთა'],[27000,'≈27 ათ.','კოსკერის მღვიმე'],[12900,'≈12.9 ათ.','ახალგაზრდა დრიასი'],
+  [11000,'≈11 ათ.','გებეკლი-თეფე'],[9000,'≈9 ათ.','ატლიტ-იამი'],[8200,'≈8.2 ათ.','8.2 ka · ბოულდნორი'],[7700,'≈7.7 ათ.','მაზამა'],
+  [6000,'ძვ.წ. 4000','CLV → იამნაია'],[5000,'ძვ.წ. 3000','მტკვარ-არაქსი'],[4200,'ძვ.წ. 2200','4.2 ka'],[3600,'ძვ.წ. XVI ს.','თერა'],
+  [3350,'ძვ.წ. XIV ს.','მიტანის ხელშეკრულება'],[3150,'ძვ.წ. ≈1150','LBA კოლაფსი'],[2360,'ძვ.წ. 373','ჰელიკე · პლატონი'],[1920,'ახ.წ. 79','ვეზუვი'],[650,'XIV ს.','შავი ჭირი']
+];
+(() => {
+  const tl = document.getElementById('tl'); const lo = Math.log(500), hi = Math.log(80000);
+  EV.forEach(([y,d,n],k) => {
+    const x = 24 + (1 - (Math.log(y)-lo)/(hi-lo)) * (980-48);
+    const e = document.createElement('div'); e.className = 'ev'; e.style.left = x + 'px'; e.style.top = (k % 2 ? 136 : 30) + 'px';
+    e.innerHTML = `<strong>${n}</strong><span>${d}</span>`;
+    const dot = document.createElement('i'); dot.className = 'dot3'; dot.style.left = x + 'px';
+    tl.appendChild(dot);
+    tl.appendChild(e);
+  });
+})();
+
+/* ---------- 3D stratigraphic core ---------- */
+(() => {
+  const cv = document.getElementById('core');
+  if (!window.THREE) { cv.style.background = 'radial-gradient(circle at 60% 40%,#1c2a4d,#0D1114 70%)'; document.getElementById('hint').hidden = true; return; }
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const R = new THREE.WebGLRenderer({canvas: cv, antialias: true, alpha: true});
+  R.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const S = new THREE.Scene(); S.fog = new THREE.Fog(0x0D1114, 9, 22);
+  const C = new THREE.PerspectiveCamera(38, 1, 0.1, 100); C.position.set(0, 1.2, 11);
+  const G = new THREE.Group(); S.add(G);
+  const cols = [0x2B3F86,0x34467E,0x3E4C6E,0x4A5460,0x5B6258,0x6F7462,0x8A8A74,0xA7A58C];
+  const layers = [];
+  cols.forEach((c, i) => {
+    const h = 0.34 + (i % 3) * 0.08;
+    const geo = new THREE.CylinderGeometry(2.2 - i * 0.05, 2.25 - i * 0.05, h, 64, 1, false, 0, Math.PI * 1.6);
+    const m = new THREE.MeshStandardMaterial({color: c, roughness: .85, metalness: .05, side: THREE.DoubleSide});
+    const mesh = new THREE.Mesh(geo, m); mesh.position.y = -2.2 + i * 0.58; G.add(mesh); layers.push(mesh);
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(2.3 - i * 0.05, 0.006, 6, 120), new THREE.MeshBasicMaterial({color: 0x6F8CEB, transparent: true, opacity: .35}));
+    ring.rotation.x = Math.PI / 2; ring.position.y = mesh.position.y + h / 2; G.add(ring);
+  });
+  // information threads: points rising through layers
+  const N = 900, pos = new Float32Array(N * 3), spd = new Float32Array(N);
+  for (let i = 0; i < N; i++) { const a = Math.random() * Math.PI * 2, r = Math.random() * 3.6; pos[i*3] = Math.cos(a) * r; pos[i*3+1] = -2.6 + Math.random() * 5.6; pos[i*3+2] = Math.sin(a) * r; spd[i] = .002 + Math.random() * .006; }
+  const pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pts = new THREE.Points(pg, new THREE.PointsMaterial({color: 0x9FB4F5, size: .035, transparent: true, opacity: .8})); G.add(pts);
+  // chronology beacons
+  EV.forEach(([y], k) => { const t = 1 - (Math.log(y) - Math.log(500)) / (Math.log(80000) - Math.log(500)); const a = k * 2.4;
+    const b = new THREE.Mesh(new THREE.SphereGeometry(.06, 12, 12), new THREE.MeshBasicMaterial({color: 0xC9A45C})); b.position.set(Math.cos(a) * 2.5, -2.3 + t * 4.4, Math.sin(a) * 2.5); G.add(b); });
+  S.add(new THREE.AmbientLight(0x8090b0, .55));
+  const key = new THREE.DirectionalLight(0xffffff, 1.1); key.position.set(4, 6, 5); S.add(key);
+  const rim = new THREE.PointLight(0x6F8CEB, 1.6, 20); rim.position.set(-4, 1, -3); S.add(rim);
+  G.rotation.x = .18; G.position.x = innerWidth > 800 ? 2.6 : 0; G.position.y = innerWidth > 800 ? .2 : 1.2;
+  let drag = false, lx = 0, vy = reduce ? 0 : .0025, ry = -.6;
+  cv.addEventListener('pointerdown', e => { drag = true; lx = e.clientX; document.getElementById('hint').hidden = true; });
+  addEventListener('pointerup', () => drag = false);
+  addEventListener('pointermove', e => { if (!drag) return; ry += (e.clientX - lx) * .008; lx = e.clientX; });
+  function size(){ const w = cv.clientWidth, h = cv.clientHeight; R.setSize(w, h, false); C.aspect = w / h; C.updateProjectionMatrix(); G.position.x = w > 1000 ? 3.6 : w > 800 ? 2.8 : 0; G.position.y = w > 800 ? .4 : 1.6; G.scale.setScalar(w > 800 ? .9 : .75); }
+  addEventListener('resize', size); size();
+  let tt = 0;
+  (function loop(){
+    tt += 1; if (!drag) ry += vy; G.rotation.y = ry;
+    if (!reduce) { const p = pg.attributes.position.array; for (let i = 0; i < N; i++) { p[i*3+1] += spd[i]; if (p[i*3+1] > 3) p[i*3+1] = -2.6; } pg.attributes.position.needsUpdate = true;
+      layers.forEach((l, i) => l.position.x = Math.sin(tt * .01 + i) * .02); }
+    R.render(S, C); requestAnimationFrame(loop);
+  })();
+})();
+</script>
+<a href="https://www.illuminismo.net/" id="ill-back" style="position:fixed;left:14px;bottom:14px;z-index:2147483000;font:500 12px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.06em;color:#E7DDC7;background:rgba(17,19,23,.82);border:1px solid rgba(184,148,77,.55);padding:9px 13px;border-radius:999px;text-decoration:none;backdrop-filter:blur(6px)">← ILLUMINISMO</a><a href="https://illuminismo.github.io/atlas/" id="ill-atlas" style="position:fixed;left:150px;bottom:14px;z-index:2147483000;font:500 12px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.06em;color:#E7DDC7;background:rgba(17,19,23,.82);border:1px solid rgba(184,148,77,.55);padding:9px 13px;border-radius:999px;text-decoration:none;backdrop-filter:blur(6px)">Atlas ◎</a></body></html>
