@@ -524,14 +524,15 @@ html,body{overflow-x:hidden}
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
     </b:widget>
-    <b:widget id='HTML904' locked='false' title='Author' type='HTML' version='2' visible='true'>
+    <b:widget id='HTML917' locked='false' title='Author' type='HTML' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='content'><![CDATA[<section class="author-band">
 <img src="https://illuminismo.github.io/greek-tarot/author.webp" alt="Nika Khutsurauli" loading="lazy"/>
-<div><p class="eyebrow">Author</p><h2>Nika Khutsurauli</h2>
-<p class="lede lang-ka">ILLUMINISMO-ს ავტორი. ვაგროვებ და ვიკვლევ პანთეონებს, ეპოსებსა და სიმბოლოებს და ახალ ფორმას ვაძლევ — ტაროდ, ფილმად, მუსიკად.</p>
-<p class="lede lang-en">Author of ILLUMINISMO. I collect and research pantheons, epics and symbols, and give them a new form — as tarot, film and music.</p>
-<p><a class="quiet" href="https://illuminismo.github.io/portfolio/">Portfolio</a> · <a class="quiet" href="/p/about.html">About</a></p></div>
+<div><p class="eyebrow"><span class="lang-ka">ავტორი</span><span class="lang-en">Author</span></p><h2><span class="lang-ka">ნიკა ხუცურაული</span><span class="lang-en">Nika Khutsurauli</span></h2>
+<p class="muted"><span class="lang-ka">ILLUMINISMO-ს დამფუძნებელი და რედაქტორი</span><span class="lang-en">Founder &amp; Editor, ILLUMINISMO</span></p>
+<p class="lede lang-ka">ILLUMINISMO დამოუკიდებელი პროექტია, რომელიც პანთეონებს, ეპოსებსა და ღრმა ისტორიას იკვლევს და ახალ ფორმას აძლევს: ტაროს, ილუსტრირებულ ეპოსს, ატლასს, მუსიკასა და სტატიებს. ჩემი გამოცდილება ისტორიას, მედიაანალიზსა და პრაქტიკულ ლოგისტიკას აერთიანებს.</p>
+<p class="lede lang-en">ILLUMINISMO is an independent project that researches pantheons, epics and deep history and gives them new form: tarot, illustrated epics, an atlas, music and articles. My background brings together history, media analysis and hands-on logistics.</p>
+<p><a class="quiet" href="/p/about.html">About</a> · <a class="quiet" href="https://illuminismo.github.io/portfolio/">Portfolio</a> · <a class="quiet" href="https://www.linkedin.com/in/nika-khutsurauli-a7329b178/" rel="noopener">LinkedIn</a> · <a class="quiet" href="https://www.youtube.com/@illuminismo7" rel="noopener">YouTube</a></p></div>
 </section>]]></b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'><data:content/></b:includable>
