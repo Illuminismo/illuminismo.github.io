@@ -243,6 +243,10 @@ a.pt-mini:hover{border-color:var(--gold)}
 .vlist{list-style:none;padding:0;margin:14px 0 20px}.vlist li{border-top:1px solid var(--line)}
 .vlist a{display:block;padding:8px 0;color:var(--text)}.vlist a:hover{color:var(--gold)}
 .pillar.empty{opacity:.55}.pillar.empty::after{content:"Soon";display:inline-block;margin-top:8px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.post-body .lang-switch{margin:0 0 1.2em;font-size:.85rem}.post-body .lang-switch a{border:1px solid var(--line);padding:4px 12px;color:var(--gold)}
+.post-body .lede{font-size:1.18rem;line-height:1.75;color:var(--text)}
+.post-body figure{margin:1.6em 0}.post-body figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+.post-body ol.sources{font-size:.9rem;color:var(--muted)}.post-body .made{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:2em}
 @media(max-width:900px){.start-grid,.music-grid{grid-template-columns:1fr}}
 
 
